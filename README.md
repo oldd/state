@@ -15,7 +15,7 @@
 * [Learning Objectives](#learning-objectives)
 * [About the Projects](#about-the-projects)
 * [Homework Submission](https://github.com/hackyourfuturebelgium/homework-submission) (external)
-* Week 1:
+* Week 1: Data First
 * Week 2:
 * Week 3:
 * [Deeper Dives](./deeper-dives.md)
@@ -82,20 +82,25 @@ Your new projects will be more interesting, but they will also be a lot more com
   * Understand order of operators
   * Be able to rewrite complex expressions as a sequence of single operations
   * Understand that implicit coercion is a learnable (but confusing) set of well-defined rules
+* Statements vs. Expressions
+  * Understand the difference between the two
+  * Explain if a line of code produces an intermediary result, updates memory, and/or redirects flow
+  * Use the debugger to step step through complex expressions
+  * Refactor between ternary operators and conditional statements
 * Reference vs. Value:
   * Understand & explain the different ways JS stores data in memory
   * Explain how arguments are passed into functions by reference or value
   * Use different strategies to avoid side-effects
   * Direct vs. Indirect keys: correctly apply dots & brackets for Array & Object access
-* Statements vs. Expressions
-  * Understand the difference between the two
-  * Explain if a line of code produces an intermediary result, updates memory, and/or redirects flow
-  * Use the debugger to step step through complex expressions
-* Control Flow
-  * Correctly apply different types of JS loops
 * Data Structures: Arrays & Objects
   * Use `Object.method`s to iterate over objects
   * Use non-mutating array methods to process data
+* Array & Object Methods
+  * Arrays: `.map`, `.reduce`, `.filter`, ...
+  * Objects: `Object.keys()`, `Object.values()`, `Object.entries()`
+  * Refactor loops into array methods
+* Control Flow
+  * Correctly apply different types of JS loops
 
 ### Integrating JavaScript (JS embedded in applications)
 
