@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>remove a child</title>
+</head>
+
+<body>
+
+  <div id='target'>
+    <details>
+      <summary>a great tutorial on DOM manipulation:</summary>
+      <a href="https://www.youtube.com/watch?v=0ik6X4DJKCc" target='_blank'>Mr. Traversy does it again!</a>
+    </details>
+  </div>
+
+  <hr>
+
+  <div id='replication'>
+    <details>
+      <summary>a great tutorial on DOM manipulation:</summary>
+      <a href="https://www.badgerbadgerbadger.com" target='_blank'>Mr. Traversy does it again!</a>
+      <a href="https://www.youtube.com/watch?v=0ik6X4DJKCc" target='_blank'>Mr. Traversy does it again!</a>
+    </details>
+  </div>
+
+  <script id='DOM manipulation script'>
+    const replicationDiv = document.getElementById('replication');
+    const detailsEl = replicationDiv.children[0];
+    const extraLink = detailsEl.children[1];
+
+    detailsEl.removeChild(extraLink);
+  </script>
+
+</body>
+
+</html>

@@ -15,9 +15,9 @@
 * [Learning Objectives](#learning-objectives)
 * [About the Projects](#about-the-projects)
 * [Homework Submission](https://github.com/hackyourfuturebelgium/homework-submission) (external)
-* Week 1: Data First
-* Week 2:
-* Week 3:
+* Week 1
+* Week 2
+* Week 3
 * [Deeper Dives](./deeper-dives.md)
 * [Class Recordings](./class-recordings.md)
 * [Study Links](https://study.hackyourfuture.be) (external)
@@ -65,16 +65,9 @@ Your new projects will be more interesting, but they will also be a lot more com
   * _Implementation_: The actual lines of code written.  How memory is manipulated so that the behavior _happens_.
 * Testing
   * Learn to _predict_ what _will happen_ instead of _describing_ what _did happen_
-  * Test Driven Development: writing tests before code
   * Testing each step of your project before moving on
-  * Reading & writing tests in many different formats
   * Using the native Node.js module `assert`
   * Writing & using popular testing libraries (jasmine & mocha)
-* Solution Design
-  * Explain and apply the different _roles for variables_
-  * Use refactoring and testing to ...
-    * decompose large challenges or pieces of code into smaller one
-    * recompose small challenges or pieces of code into larger ones
 
 ### Isolating JavaScript (study JS outside of applications)
 

@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>A</title>
+</head>
+
+<body>
+
+  <div id='target'>
+    <a href='https://www.badgerbadgerbadger.com' target="_blank">learn about badgers</a>
+  </div>
+
+  <hr>
+
+  <div id='replication'></div>
+
+  <script id='DOM manipulation script'>
+    const aEl = document.createElement('a');
+    aEl.innerText = 'learn about badgers';
+    aEl.href = 'https://www.badgerbadgerbadger.com';
+    aEl.target = '_blank';
+
+    document.getElementById('replication')
+      .appendChild(aEl);
+  </script>
+
+</body>
+
+</html>

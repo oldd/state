@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>updating a nested child</title>
+</head>
+
+<body>
+
+  <div id='target'>
+    <h1>a list of things</h1>
+    <ul>
+      <li>robots</li>
+      <li>solar systems</li>
+      <li>oil</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <div id='replication'>
+    <h1>a list of things</h1>
+    <ul>
+      <li>robots</li>
+      <li>wrong wrong wrong wrong</li>
+      <li>oil</li>
+    </ul>
+  </div>
+
+  <script id='DOM manipulation script'>
+    const replicationDiv = document.getElementById('replication');
+    const ulEl = replicationDiv.children[1];
+    const liToCorrect = ulEl.children[1];
+    liToCorrect.innerText = 'solar systems';
+  </script>
+
+</body>
+
+</html>

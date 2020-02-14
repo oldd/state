@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>update ul: loop</title>
+</head>
+
+<body>
+
+  <div id='target'>
+    <h1>a list of things</h1>
+    <ul>
+      <li>robots</li>
+      <li>solar systems</li>
+      <li>oil</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <div id='replication'>
+    <h1>a list of things</h1>
+    <ul>
+      <li>pigs</li>
+      <li>chairs</li>
+      <li>a carpet</li>
+    </ul>
+  </div>
+
+  <script id='dom-manipulation'>
+    const things = ['robots', 'solar systems', 'oil'];
+
+    const replication = document.getElementById('replication');
+    const ulEl = replication.children[1];
+
+    for (let i = 0; i < things.length; i++) {
+      ulEl.children[i].innerText = things[i];
+    }
+  </script>
+
+</body>
+
+</html>

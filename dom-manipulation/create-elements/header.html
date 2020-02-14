@@ -1,0 +1,30 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>H1</title>
+</head>
+
+<body>
+
+  <div id='target'>
+    <h1>hi!</h1>
+  </div>
+
+  <hr>
+
+  <div id='replication'></div>
+
+  <script id='DOM manipulation script'>
+    const h1El = document.createElement('h1');
+    h1El.innerText = 'hi!';
+
+    document.getElementById('replication')
+      .appendChild(h1El);
+  </script>
+
+</body>
+
+</html>

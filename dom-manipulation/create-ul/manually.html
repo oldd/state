@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>create ul: manually</title>
+</head>
+
+<body>
+
+  <div id='target'>
+    <h1>a list of things</h1>
+    <ul>
+      <li>robots</li>
+      <li>solar systems</li>
+      <li>oil</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <div id='replication'></div>
+
+  <script id='dom-manipulation'>
+    const h1El = document.createElement('h1');
+    h1El.innerText = 'a list of things';
+
+    const li1 = document.createElement('li');
+    li1.innerText = 'robots';
+
+    const li2 = document.createElement('li');
+    li2.innerText = 'solar systems';
+
+    const li3 = document.createElement('li');
+    li3.innerText = 'oil';
+
+    const ulEl = document.createElement('ul');
+    ulEl.appendChild(li1);
+    ulEl.appendChild(li2);
+    ulEl.appendChild(li3);
+
+    const replication = document.getElementById('replication');
+    replication.appendChild(h1El);
+    replication.appendChild(ulEl);
+  </script>
+
+</body>
+
+</html>

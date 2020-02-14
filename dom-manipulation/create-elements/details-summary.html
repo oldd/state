@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>DETAILS/SUMMARY</title>
+
+<body>
+
+  <div id='target'>
+    <details>
+      <summary>a great tutorial on DOM manipulation:</summary>
+      <a href="https://www.youtube.com/watch?v=0ik6X4DJKCc" target='_blank'>Mr. Traversy does it again!</a>
+    </details>
+  </div>
+
+  <hr>
+
+  <div id='replication'></div>
+
+  <script id='DOM manipulation script'>
+    const summaryEl = document.createElement('summary');
+    summaryEl.innerText = 'a great tutorial on DOM manipulation:';
+
+    const aEl = document.createElement('a');
+    aEl.innerText = 'Mr. Traversy does it again!';
+    aEl.href = 'https://www.youtube.com/watch?v=0ik6X4DJKCc';
+    aEl.target = '_blank';
+
+
+    const detailsEl = document.createElement('details');
+    detailsEl.appendChild(summaryEl);
+    detailsEl.appendChild(aEl);
+
+    document.getElementById('replication')
+      .appendChild(detailsEl);
+  </script>
+
+</body>
+
+</html>

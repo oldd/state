@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>update ul: manually</title>
+</head>
+
+<body>
+
+  <div id='target'>
+    <h1>a list of things</h1>
+    <ul>
+      <li>robots</li>
+      <li>solar systems</li>
+      <li>oil</li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <div id='replication'>
+    <h1>a list of things</h1>
+    <ul>
+      <li>pigs</li>
+      <li>chairs</li>
+      <li>a carpet</li>
+    </ul>
+  </div>
+
+  <script id='dom-manipulation'>
+    const replication = document.getElementById('replication')
+    const ulEl = replication.children[1];
+
+    ulEl.children[0].innerText = 'robots';
+    ulEl.children[1].innerText = 'solar systems';
+    ulEl.children[2].innerText = 'oil';
+  </script>
+
+</body>
+
+</html>
