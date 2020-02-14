@@ -15,7 +15,10 @@
 * [Learning Objectives](#learning-objectives)
 * [About the Projects](#about-the-projects)
 * [Homework Submission](https://github.com/hackyourfuturebelgium/homework-submission) (external)
-* Week 1
+* [Week 1](./week-1)
+  * [Prep Work](./week-1#prep-work)
+  * [Lesson Plan](https://hackyourfuture.be/state/week-1)
+  * [Assignments](./week-1#assignments)
 * Week 2
 * Week 3
 * [Deeper Dives](./deeper-dives.md)
@@ -51,7 +54,7 @@ Your new projects will be more interesting, but they will also be a lot more com
   * Use this log to reconstruct user actions and debug your projects
 * Data-first development
   * Understanding applications as Data + User Interactions
-  * Developing from the "inside" out: planning data & logic before the user interface
+  * Developing from the "inside" out: planning the data & logic of your app without a user interface
   * Explain what a schema is and why it's useful (PS. it's like tests, but for data!)
   * Use the JSON schema specification to document your program's data
   * Use a schema validation library to grantee the integrity of your project's data
@@ -102,7 +105,7 @@ Your new projects will be more interesting, but they will also be a lot more com
   2. _Logic_: define & test how user data is transformed
   3. _DOM_: define the structure of your user interface
   4. _Styles_: define the display of your user interface
-  5. _Actions_: define _how_ users will interact with your program (handlers + listeners)
+  5. _Listeners_: define _how_ users will interact with your program 
   6. _Handlers_: define _what_ interactions a user is allowed to have with program state
 * DOM Manipulation
   * Dynamically update the DOM
@@ -125,32 +128,24 @@ In this module you'll be flipping everything upside down! In previous modules yo
 
 A working project is not enough! For projects in this module we will expect you to turn in code that is well organized & documented according to it's role.  Your projects should have these directories:
 
-* `/data`: contains your schema, initial state, and a helpful README (including a description of your schema)
-* `/logic`: contains your tests, pure functions, and a helpful README (including specs for your functions)
-* `/actions`: contains pairs of event listeners & handlers to implement your user stories and a helpful README with some specs
+* `/data`: contains your schema, initial state, and a helpful README (including a description of your data)
+* `/scripts`: constains your logic, handlers, listeners, and a README describing what is in each file
 * `/styles`: contains the CSS for your web page and a helpful README (including documentation of your classes & styles)
 * `index.html`: contains the initial DOM for your user interface & requires all scripts
-* `init.js`: initializes your live project's log & anything else that needs to happen when the window loads
+* `log.js`: contains the initial empty log for your project.  For now, just an empty array
 * `README.md`: describes what your project does & how to use it.
 * `development-strategy.md`: a file containing a table of your user stories in order, with one column for each folder.
 
-Your project will contain one more directory called `/dependencies`, but there is nothing for you to write in here. This folder will contain testing and validation scripts provided by us.
+Your project may contain one more directory called `/dependencies` if you are beginning from a fork, but there is nothing for you to write in here. This folder will contain testing and validation scripts provided by us.
 
 ### Development Strategy
 
-The `development-strategy.md` for this module will be less detailed than in the last module.  As your applications grows in complexity it will become impractical to capture all the details on one table.  You will write the detailed documentation for each concern in the separate README's.  Try to keep your descriptions in each section as short and clear as possible! The main development strategy file will look like this:
-
-| User Story | Data | Logic | DOM | Styles | Actions |
-| --- | --- | --- | --- | --- | --- |
-|  |  |  |  |  |  |
+The `development-strategy.md` for this module will be less detailed than in the last module.  As your applications grows in complexity it will become impractical to capture all the details on one table.   Each of your folders will contain detailed documentation of the code in that folder, your main `development-strategy.md` will just have a list of user stories and what you added to implement that story.
 
 Good luck!
 
 [TOP](#overview)
 
----
-
-![[food, not food](https://deviq.com/separation-of-concerns/)](./separation-of-concerns.png)
 
 ---
 ---
