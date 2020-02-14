@@ -15,7 +15,10 @@
 * [Learning Objectives](#learning-objectives)
 * [About the Projects](#about-the-projects)
 * [Homework Submission](https://github.com/hackyourfuturebelgium/homework-submission) (external)
-* Week 1
+* [Week 1](./week-1)
+  * [Prep Work](./week-1#prep-work)
+  * [Lesson Plan](https://hackyourfuture.be/state/week-1)
+  * [Assignments](./week-1#assignments)
 * Week 2
 * Week 3
 * [Deeper Dives](./deeper-dives.md)
