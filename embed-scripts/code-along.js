@@ -112,7 +112,13 @@ async function codeAlong(config) {
 
         iframe.contentDocument.head.appendChild(aceScript);
       });
-    } catch (err) { console.log(err) };
+    } catch (err) {
+      console.log(err);
+      const error = document.createElement('code');
+      error.innerHTML = 'could not reach internet or liveServer, unable to load code-along';
+      error.style = 'position:absolute; position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);text-align: center;';
+      iframe.contentDocument.body.appendChild(error);
+    };
   }
 
   const tempHeader = document.createElement('h1');
@@ -536,7 +542,8 @@ codeAlong.js = (iframe, steps, config) => {
   const renderCollapsed = () => {
     outputContainer.innerHTML = '';
     outputContainer.appendChild(collapsedOutput);
-    outputContainer.style = 'height: 5vh; width: 98vw; z-index: 100; position: absolute; bottom: 3vh;';
+    // outputContainer.style = 'height: 5vh; width: 98vw; z-index: 100; position: absolute; bottom: 3vh;';
+    outputContainer.style = 'height: 5vh; width: 55vw; z-index: 100; position: absolute; bottom: 3vh; left: 45vw;';
     editorContainer.style = 'height:92vh;width:94vw;';
     editor.resize();
   };
@@ -559,7 +566,7 @@ codeAlong.js = (iframe, steps, config) => {
 
   const collapsedOutput = document.createElement('div');
   // collapsedOutput.style = 'height: 10vh; width: 55vw; border:solid 1px;';
-  collapsedOutput.style = 'border:solid 1px; opacity: 1; background-color: white;';
+  collapsedOutput.style = 'border:solid 1px; opacity: 1; background-color: white; float: right;';
 
   const unCollapseOutputButton = document.createElement('button');
   // unCollapseOutputButton.style = 'float:right;';
@@ -638,7 +645,7 @@ codeAlong.step_through_in_debugger = function in_debugger(your_source_code) {
   } catch (err) {
     console.log(err);
   };
-  return "     All done! \n\n     (psst. try again with devtools open if they aren't already)";
+  return "    All done! \n\n    (psst. try again with devtools open if they aren't already)";
 }
 
 codeAlong.format_and_loop_guard = function with_infinite_loop_guard(your_source_code, max_iterations) {
