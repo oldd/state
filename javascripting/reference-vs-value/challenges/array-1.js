@@ -1,6 +1,5 @@
 console.log('\n--- array challenge: 1 ---');
 
-
 ; // declare and assign array1
 ; // declare and assign array2
 

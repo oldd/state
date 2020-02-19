@@ -5,19 +5,22 @@
   <meta charset='utf-8'>
   <title>Up, Down</title>
   <link rel="stylesheet" href="./style.css">
-  <script src='./log.js'></script>
   <script src='./data/numbers.js'></script>
-  <script src='./scripts/handlers.js'></script>
+  <script src='./log.js'></script>
+  <script src='./init.js'></script>
 </head>
 
 <body>
   <section id='user-interface' class='centered'>
-    <code id='current-number'>0</code> <br>
+    <code id='current-number'></code> <br>
     <button id='plus-one'>+</button>
-    <button id='minus-one'>-</button>
+    <button id='minus-one'>-</button> <br>
+    <button id='reset'>reset</button>
   </section>
 
-  <script src='./scripts/listeners.js'></script>
+  <script src='./user-stories/up.js'></script>
+  <script src='./user-stories/down.js'></script>
+  <script src='./user-stories/reset.js'></script>
 </body>
 
 </html>

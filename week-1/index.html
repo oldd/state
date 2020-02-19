@@ -1,3 +1,17 @@
+<!--
+  240 - all class
+  120 - pre break
+    30 - questions / review
+    50 - array stuff
+    40 - dom manipulation
+  20 min - break
+  100 - post break
+    10 - about state
+    80 - group projecting
+    10 - homework launch
+ -->
+
+
 <!doctype html>
 <html>
 
@@ -14,18 +28,6 @@
   <link rel="stylesheet" href="../reveal.js/css/theme/night.css">
 
   <script src="../embed-scripts/beautify.js"></script>
-
-  <!-- Theme used for syntax highlighting of code -->
-  <!-- <link rel="stylesheet" href="./reveal.js/lib/css/monokai.css"> -->
-
-  <!-- Printing and PDF exports -->
-  <!-- <script>
-        var link = document.createElement('link');
-        link.rel = '../reveal.js/stylesheet';
-        link.type = '../reveal.js/text/css';
-        link.href = window.location.search.match(/print-pdf/gi) ? '../reveal.js/css/print/pdf.css' : './reveal.js/css/print/paper.css';
-        document.getElementsByTagName('head')[0].appendChild(link);
-      </script> -->
 
   <style>
     /* https://stackoverflow.com/questions/25479420/how-to-add-a-fixed-footer-on-all-slides */
@@ -80,10 +82,10 @@
           <h3>Integrating JavaScript</h3>
           <br>
           <ul>
-            <li><strong>Apps</strong>: Data + User Actions</li>
+            <li><strong>Apps</strong>: Data + interactions</li>
             <li><strong>State</strong>: current data in your app</li>
-            <li><strong>Actions</strong>: what users can do with your data</li>
-            <li><strong>Log</strong>: a history of user actions & state</li>
+            <li><strong>Log</strong>: a history of user interactions & state</li>
+            <li><strong>User Stories</strong>: what users can do with your data</li>
           </ul>
         </section>
         <section>
@@ -92,8 +94,8 @@
           <ul>
             <li>Reference vs. Value</li>
             <li>Side Effects</li>
-            <li>Higher-Order Functions</li>
-            <li>Array Methods</li>
+            <li>Updating DOM Elements</li>
+            <li>Updating DOM Elements</li>
           </ul>
         </section>
       </section>
@@ -106,101 +108,6 @@
         <p>Any other Questions?</p>
         <br>
         <code>(~60 min)</code>
-      </section>
-
-      <section id='stateful-web-pages'>
-        <h1>Stateful Web Pages</h1>
-        <br>
-        <br>
-        <p>Web pages that store data</p>
-        <br>
-        <br>
-        <code>(~45 min)</code>
-      </section>
-
-      <section id='what-are-apps'>
-        <section>
-          <h2>Apps</h2>
-          <br>
-          <p>Data + User Actions</p>
-        </section>
-        <section>
-          <h3>State</h3>
-          <br>
-          <p>The current data stored by your web page</p>
-        </section>
-        <section>
-          <h2>Actions</h2>
-          <br>
-          <p>What users can do with your data</p>
-        </section>
-        <section>
-          <h2>Logs</h2>
-          <br>
-          <p>A history of user actions & state over time</p>
-        </section>
-      </section>
-
-      <section id='up-down'>
-        <section>
-          <h2>Example Stateful Project</h2>
-          <br>
-          <p>up/down</p>
-        </section>
-        <section id='up-down-stepped'>
-          <script>
-            codeAlong({
-              title: 'Up/Down: Stepped',
-              container: 'up-down-stepped',
-              type: 'document',
-              source: [
-                {
-                  name: '0. Setup',
-                  path: '../example-projects/up-down-stepped/0-setup.html'
-                },
-                {
-                  name: '1. DOM',
-                  path: '../example-projects/up-down-stepped/1-dom.html'
-                },
-                {
-                  name: '2. Style',
-                  path: '../example-projects/up-down-stepped/2-style.html'
-                },
-                {
-                  name: '3. State',
-                  path: '../example-projects/up-down-stepped/3-data.html'
-                },
-                {
-                  name: '4. Listeners',
-                  path: '../example-projects/up-down-stepped/4-listeners.html'
-                },
-                {
-                  name: '5. Handlers',
-                  path: '../example-projects/up-down-stepped/5-handlers.html'
-                },
-                {
-                  name: '6. Log',
-                  path: '../example-projects/up-down-stepped/6-log.html'
-                },
-              ]
-            })
-          </script>
-        </section>
-        <section>
-          <h2>Up/Down Separated</h2>
-          <br>
-          <ul>
-            <li><a href='../example-projects/up-down-separated/index.html' target='_blank'>live project</a></li>
-            <li><a href='https://github.com/hackyourfuturebelgium/state/tree/master/example-projects/up-down-separated'
-                target='_blank'>source code</a></li>
-          </ul>
-        </section>
-      </section>
-
-      <section id='break'>
-        <h1>Break!</h1>
-        <br>
-        <code>(~20 min)</code>
       </section>
 
       <section id='isolating-javascript'>
@@ -315,48 +222,11 @@
         </section>
       </section>
 
-      <section>
-        <li>Higher-Order Functions</li>
-      </section>
-
-      <section>
-        <li>Array Methods</li>
-      </section>
-
-      <section id='integrating-javascript'>
-        <h1>Integrating JavaScript</h1>
-        <br>
-        <p>Arrays, Objects, Side Effects</p>
-      </section>
-
       <section id='dom-manipulation'>
         <section>
           <h2><code>DOM Manipulation</code></h2>
           <br>
           <p>Changing the DOM with JavaScript</p>
-        </section>
-        <section id='dom-create'>
-          <script>
-            codeAlong({
-              title: 'DOM Manipulation: Create Elements',
-              container: 'dom-create',
-              type: 'document',
-              source: [
-                {
-                  name: 'header',
-                  path: '../dom-manipulation/create-elements/header.html',
-                },
-                {
-                  name: 'link',
-                  path: '../dom-manipulation/create-elements/link.html',
-                },
-                {
-                  name: 'details & summary',
-                  path: '../dom-manipulation/create-elements/details-summary.html',
-                },
-              ]
-            })
-          </script>
         </section>
         <section id='dom-update'>
           <script>
@@ -365,6 +235,10 @@
               container: 'dom-update',
               type: 'document',
               source: [
+                {
+                  name: 'classes',
+                  path: '../dom-manipulation/update-elements/classes.html',
+                },
                 {
                   name: 'bad link',
                   path: '../dom-manipulation/update-elements/bad-link.html',
@@ -389,6 +263,60 @@
             })
           </script>
         </section>
+        <section id='dom-create'>
+          <script>
+            codeAlong({
+              title: 'DOM Manipulation: Create Elements',
+              container: 'dom-create',
+              type: 'document',
+              source: [
+                {
+                  name: 'header',
+                  path: '../dom-manipulation/create-elements/header.html',
+                },
+                {
+                  name: 'link',
+                  path: '../dom-manipulation/create-elements/link.html',
+                },
+                {
+                  name: 'details & summary',
+                  path: '../dom-manipulation/create-elements/details-summary.html',
+                },
+              ]
+            })
+          </script>
+        </section>
+        <section id='dom-challenges'>
+          <script>
+            codeAlong({
+              title: 'DOM Manipulation: Challenges',
+              container: 'dom-challenges',
+              type: 'document',
+              source: [
+                {
+                  name: 'Link Button',
+                  path: '../dom-manipulation/week-1-challenges/link-button.html',
+                },
+                {
+                  name: 'Styles',
+                  path: '../dom-manipulation/week-1-challenges/styles.html',
+                },
+                {
+                  name: 'UL (1)',
+                  path: '../dom-manipulation/week-1-challenges/ul-1.html',
+                },
+                {
+                  name: 'UL (2)',
+                  path: '../dom-manipulation/week-1-challenges/ul-2.html',
+                },
+                {
+                  name: 'Tables',
+                  path: '../dom-manipulation/week-1-challenges/tables.html',
+                },
+              ]
+            })
+          </script>
+        </section>
         <section>
           <h3>Helpful Links</h3>
           <p>Side Effects</p>
@@ -396,6 +324,127 @@
           <ul></ul>
         </section>
       </section>
+
+      <section id='break'>
+        <h1>Break!</h1>
+        <br>
+        <code>(~20 min)</code>
+      </section>
+
+      <section id='integrating-javascript'>
+        <h1>Integrating JavaScript</h1>
+        <br>
+        <p></p>
+      </section>
+
+      <section id='stateful-web-pages'>
+        <h1>Stateful Web Pages</h1>
+        <br>
+        <br>
+        <p>Web pages that store data</p>
+        <br>
+        <br>
+        <code>(~45 min)</code>
+      </section>
+
+      <section id='what-are-apps'>
+        <section>
+          <h2>Apps</h2>
+          <br>
+          <p>Data + User Interactions</p>
+        </section>
+        <section>
+          <h3>Data</h3>
+          <br>
+          <p>The information stored by your web page</p>
+        </section>
+        <section>
+          <h2>User Stories</h2>
+          <br>
+          <p>What users can do with your data</p>
+        </section>
+        <section>
+          <h2>Logs</h2>
+          <br>
+          <p>A history of user interactions & state over time</p>
+        </section>
+      </section>
+
+
+      <section id='using-side-effects'>
+        <section>
+          <h2>Using Side Effects</h2>
+          <br>
+          <p>Updating State by reference</p>
+        </section>
+        <section>
+          <h3>Data</h3>
+          <br>
+          <p>handlers directly update a shared state object</p>
+        </section>
+      </section>
+
+      <section id='up-down'>
+        <section>
+          <h2>Example Stateful Project</h2>
+          <br>
+          <p>up/down</p>
+        </section>
+        <section id='up-down-stepped'>
+          <script>
+            codeAlong({
+              title: 'Up/Down: Stepped',
+              container: 'up-down-stepped',
+              type: 'document',
+              source: [
+                {
+                  name: '0. Setup',
+                  path: '../example-projects/up-down-stepped/0-setup.html'
+                },
+                {
+                  name: '1. Data & Log',
+                  path: '../example-projects/up-down-stepped/1-data-and-log.html'
+                },
+                {
+                  name: '2. Initialize',
+                  path: '../example-projects/up-down-stepped/2-initialize.html'
+                },
+                {
+                  name: '3. Story: up',
+                  path: '../example-projects/up-down-stepped/3-story-up.html'
+                },
+                {
+                  name: '4. Story: down',
+                  path: '../example-projects/up-down-stepped/4-story-down.html'
+                },
+                {
+                  name: '5. Story: reset',
+                  path: '../example-projects/up-down-stepped/5-story-reset.html'
+                },
+              ]
+            })
+          </script>
+        </section>
+        <section>
+          <h2>Up/Down Separated</h2>
+          <br>
+          <ul>
+            <li><a href='../example-projects/up-down-separated/index.html' target='_blank'>live project</a></li>
+            <li><a href='https://github.com/hackyourfuturebelgium/state/tree/master/example-projects/up-down-separated'
+                target='_blank'>source code</a></li>
+          </ul>
+        </section>
+      </section>
+
+
+      <section id='in-class-project'>
+        <section>
+          <h2>In-Class Project</h2>
+          <br>
+          <p>Build a stateful web page</p>
+        </section>
+      </section>
+
       <section id='homework-launch'>
         <section>
           <h2>Homework Launch</h2>

@@ -2,7 +2,6 @@
 <html>
 
 <head>
-  <!-- inspect/debug in new tab to access the log -->
   <meta charset='utf-8'>
   <title>Up, Down</title>
   <style>
@@ -14,49 +13,53 @@
       text-align: center;
     }
   </style>
-  <script id='log'>
-    const log = [];
-  </script>
   <script id='data'>
     const numbers = {
       current: 0,
       past: []
     }
   </script>
-  <script id='handlers'>
-    function up() {
-      numbers.past.push(numbers.current);
-      numbers.current += 1;
+  <script id='log'>
+    const log = [];
+  </script>
+  <script id='init'>
+    window.onload = () => {
+      log.push({ initialNumbers: JSON.parse(JSON.stringify(numbers)) });
       document.getElementById('current-number').innerHTML = numbers.current;
-      log.push({
-        action: 'up',
-        numbers: JSON.parse(JSON.stringify(numbers))
-      })
-    }
-    function down() {
-      numbers.past.push(numbers.current);
-      numbers.current -= 1;
-      document.getElementById('current-number').innerHTML = numbers.current;
-      log.push({
-        action: 'down',
-        numbers: JSON.parse(JSON.stringify(numbers))
-      })
     }
   </script>
 </head>
 
 <body>
   <section id='user-interface' class='centered'>
-    <code id='current-number'>0</code> <br>
+    <code id='current-number'></code> <br>
     <button id='plus-one'>+</button>
     <button id='minus-one'>-</button>
   </section>
 
-  <script id='listeners'>
+  <script id='stories'>
+    function up() {
+      numbers.past.push(numbers.current);
+      numbers.current += 1;
+      document.getElementById('current-number').innerHTML = numbers.current;
+      log.push({
+        userStory: 'up',
+        numbers: JSON.parse(JSON.stringify(numbers))
+      });
+    }
     document.getElementById('plus-one').addEventListener('click', up);
+
+    function down() {
+      numbers.past.push(numbers.current);
+      numbers.current -= 1;
+      document.getElementById('current-number').innerHTML = numbers.current;
+      log.push({
+        userStory: 'down',
+        numbers: JSON.parse(JSON.stringify(numbers))
+      });
+    }
     document.getElementById('minus-one').addEventListener('click', down);
   </script>
-
 </body>
 
 </html>

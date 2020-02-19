@@ -47,7 +47,7 @@ Your new projects will be more interesting, but they will also be a lot more com
   * _READMEs_ for why your project exists and how to run it
   * _schemas_ to describe data in your program (data/state)
   * _wireframes_ to describe the user interface (html & css)
-  * _user stories_ to define the actions a user can take (handlers & listeners)
+  * _user stories_ to define the interactions a user can have (handlers & listeners)
   * _tests_ & _specs_ to describe the logic in your program (logic)
 * Logging
   * Capture and store a log of all user interactions & state changes
@@ -101,12 +101,12 @@ Your new projects will be more interesting, but they will also be a lot more com
 ### Integrating JavaScript (JS embedded in applications)
 
 * Organizing your code based on it's _role_ in your program
+  1. _Setup_: lay out the boilerplate for your app
+  1. _DOM_: define the structure of your user interface
+  1. _Styles_: define the display of your user interface
   1. _Data_: the information your users are interacting with
-  2. _Logic_: define & test how user data is transformed
-  3. _DOM_: define the structure of your user interface
-  4. _Styles_: define the display of your user interface
-  5. _Listeners_: define _how_ users will interact with your program 
-  6. _Handlers_: define _what_ interactions a user is allowed to have with program state
+  1. _Log_: keep a record of every user interaction
+  1. _User Stories_: how can users interact with your data?
 * DOM Manipulation
   * Dynamically update the DOM
   * Represent changes in state with the user interface
@@ -122,7 +122,7 @@ In this module you'll be flipping everything upside down! In previous modules yo
 1. __What can a user do on your web site?__ Write user stories to describe the user's possible interactions with your site
 1. __What data is necessary for these user stories?__  Write a schema to describe & validate your project's data.
 1. __What must a user be able to do to this dtat?__ Write & test the logic to enable these interactions.
-1. __How does the UI display *state* and possible *actions*?__ Write a wireframe to describe the user interface.
+1. __How does the UI display *state* and possible *interactions*?__ Write a wireframe to describe the user interface.
 
 ### Separating your Concerns
 

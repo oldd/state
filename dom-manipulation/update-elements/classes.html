@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>H1</title>
+  <style>
+    .pretty {
+      color: orange;
+      font-family: serif;
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id='target'>
+    <h1 class='pretty'>hi!</h1>
+  </div>
+
+  <hr>
+
+  <div id='replication'>
+    <h1>hi!</h1>
+  </div>
+
+  <script id='DOM manipulation script'>
+    const replication = document.getElementById('replication');
+    const header = replication.children[0];
+    header.className = 'pretty';
+  </script>
+
+</body>
+
+</html>

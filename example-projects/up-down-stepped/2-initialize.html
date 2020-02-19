@@ -13,25 +13,31 @@
       text-align: center;
     }
   </style>
-  <script id='log'></script>
   <script id='data'>
     const numbers = {
       current: 0,
       past: []
     }
   </script>
-  <script id='handlers'></script>
+  <script id='log'>
+    const log = [];
+  </script>
+  <script id='init'>
+    window.onload = () => {
+      // log initial state
+      log.push({ initialNumbers: JSON.parse(JSON.stringify(numbers)) });
+      // render UI from initial state
+      document.getElementById('current-number').innerHTML = numbers.current;
+    }
+  </script>
 </head>
 
 <body>
   <section id='user-interface' class='centered'>
-    <code>0</code> <br>
-    <button>+</button>
-    <button>-</button>
+    <code id='current-number'></code>
   </section>
 
-  <script id='listeners'></script>
-
+  <script id='stories'></script>
 </body>
 
 </html>
