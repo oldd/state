@@ -37,6 +37,4 @@ function addMeasurementHandler(event) {
   })
 
 }
-document.getElementById('measurement-button')
-  .addEventListener('click', addMeasurementHandler);
 

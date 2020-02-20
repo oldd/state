@@ -1,15 +1,15 @@
 function play(oldPlayer, oldValue) {
-  const result = {};
+  const nextPlay = {};
   if (oldValue !== null) {
-    result.squareValue = oldValue;
-    result.nextPlayer = oldPlayer;
+    nextPlay.squareValue = oldValue;
+    nextPlay.nextPlayer = oldPlayer;
   } else {
-    result.squareValue = oldPlayer;
-    result.nextPlayer = oldPlayer === 'X'
+    nextPlay.squareValue = oldPlayer;
+    nextPlay.nextPlayer = oldPlayer === 'X'
       ? 'O'
       : 'X';
   }
-  return result;
+  return nextPlay;
 }
 
 const playTests = [

@@ -19,4 +19,3 @@ function resetGame() {
     game: JSON.parse(JSON.stringify(game))
   })
 }
-document.getElementById('reset').addEventListener('click', resetGame);

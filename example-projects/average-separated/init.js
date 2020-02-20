@@ -1,4 +1,5 @@
 window.onload = function () {
+  debugger;
   // render initial state
   document.getElementById('current-average').innerHTML = measurements.average;
 

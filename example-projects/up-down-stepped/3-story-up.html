@@ -28,16 +28,9 @@
       document.getElementById('current-number').innerHTML = numbers.current;
     }
   </script>
-</head>
-
-<body>
-  <section id='user-interface' class='centered'>
-    <code id='current-number'></code> <br>
-    <button id='plus-one'>+</button>
-  </section>
-
-  <script id='stories'>
+  <script id="handlers">
     function up() {
+      debugger;
       numbers.past.push(numbers.current);
       numbers.current += 1;
       document.getElementById('current-number').innerHTML = numbers.current;
@@ -46,6 +39,16 @@
         numbers: JSON.parse(JSON.stringify(numbers))
       });
     }
+  </script>
+</head>
+
+<body>
+  <section id='user-interface' class='centered'>
+    <code id='current-number'></code> <br>
+    <button id='plus-one'>+</button>
+  </section>
+
+  <script id='listeners'>
     document.getElementById('plus-one').addEventListener('click', up);
   </script>
 </body>

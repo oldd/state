@@ -13,4 +13,4 @@ function up() {
     numbers: JSON.parse(JSON.stringify(numbers))
   });
 }
-document.getElementById('plus-one').addEventListener('click', up);
+

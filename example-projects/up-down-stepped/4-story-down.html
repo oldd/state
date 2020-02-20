@@ -28,6 +28,28 @@
       document.getElementById('current-number').innerHTML = numbers.current;
     }
   </script>
+  <script id='handlers'>
+    function up() {
+      debugger;
+      numbers.past.push(numbers.current);
+      numbers.current += 1;
+      document.getElementById('current-number').innerHTML = numbers.current;
+      log.push({
+        userStory: 'up',
+        numbers: JSON.parse(JSON.stringify(numbers))
+      });
+    }
+    function down() {
+      debugger;
+      numbers.past.push(numbers.current);
+      numbers.current -= 1;
+      document.getElementById('current-number').innerHTML = numbers.current;
+      log.push({
+        userStory: 'down',
+        numbers: JSON.parse(JSON.stringify(numbers))
+      });
+    }
+  </script>
 </head>
 
 <body>
@@ -37,27 +59,8 @@
     <button id='minus-one'>-</button>
   </section>
 
-  <script id='stories'>
-    function up() {
-      numbers.past.push(numbers.current);
-      numbers.current += 1;
-      document.getElementById('current-number').innerHTML = numbers.current;
-      log.push({
-        userStory: 'up',
-        numbers: JSON.parse(JSON.stringify(numbers))
-      });
-    }
+  <script id='listeners'>
     document.getElementById('plus-one').addEventListener('click', up);
-
-    function down() {
-      numbers.past.push(numbers.current);
-      numbers.current -= 1;
-      document.getElementById('current-number').innerHTML = numbers.current;
-      log.push({
-        userStory: 'down',
-        numbers: JSON.parse(JSON.stringify(numbers))
-      });
-    }
     document.getElementById('minus-one').addEventListener('click', down);
   </script>
 </body>

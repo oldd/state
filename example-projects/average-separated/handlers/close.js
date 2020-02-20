@@ -9,6 +9,11 @@ function closeMeasurementsHandler() {
   measurementsButton.removeEventListener('click', addMeasurementHandler);
   measurementsButton.value = 'measurements are closed';
 
+  const closeButton = document.getElementById('close-button');
+  closeButton.innerHTML = 'open measurements';
+  closeButton.removeEventListener('click', closeMeasurementsHandler);
+  closeButton.addEventListener('click', openMeasurementsHandler);
+
   // log action
   log.push({
     userStory: 'close measurements',
@@ -16,6 +21,4 @@ function closeMeasurementsHandler() {
   })
 
 }
-document.getElementById('close-button')
-  .addEventListener('click', closeMeasurementsHandler);
 

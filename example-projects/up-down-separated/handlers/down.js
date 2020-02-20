@@ -13,4 +13,3 @@ function down() {
     numbers: JSON.parse(JSON.stringify(numbers))
   });
 }
-document.getElementById('minus-one').addEventListener('click', down);

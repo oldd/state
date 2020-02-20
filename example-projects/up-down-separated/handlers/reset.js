@@ -12,4 +12,4 @@ function resetHandler() {
     numbers: JSON.parse(JSON.stringify(numbers))
   })
 }
-document.getElementById('reset').addEventListener('click', resetHandler);
+
