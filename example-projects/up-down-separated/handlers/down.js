@@ -9,7 +9,7 @@ function down() {
 
   // log action for developers
   log.push({
-    userStory: 'down',
+    handler: 'down',
     numbers: JSON.parse(JSON.stringify(numbers))
   });
 }

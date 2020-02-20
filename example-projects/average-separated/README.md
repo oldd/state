@@ -24,8 +24,4 @@ The steps used to build this game.  Can you figure out what code was written for
 
 ---
 
-## 5. A user can stop collecting measurements
-
----
-
-## 6. A user can re-start collecting measurements
+## 5. A user can stop or start collecting measurements

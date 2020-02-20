@@ -9,7 +9,7 @@ function up() {
 
   // log action for developers
   log.push({
-    userStory: 'up',
+    handler: 'up',
     numbers: JSON.parse(JSON.stringify(numbers))
   });
 }

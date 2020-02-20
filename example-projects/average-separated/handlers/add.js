@@ -30,7 +30,7 @@ function addMeasurementHandler(event) {
 
   // log action
   log.push({
-    userStory: 'add measurement',
+    handler: 'add measurement',
     newMeasurementStr,
     newMeasurement,
     measurements: JSON.parse(JSON.stringify(measurements))

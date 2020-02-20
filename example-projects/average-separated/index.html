@@ -13,26 +13,25 @@
 
   <script src='./handlers/add.js'></script>
   <script src='./handlers/reset.js'></script>
-  <script src='./handlers/close.js'></script>
-  <script src='./handlers/open.js'></script>
+  <script src='./handlers/close-open.js'></script>
 </head>
 
 <body>
   <section id='user-interface' class='centered'>
     <form id='input-form'>
       <input type='text' name='measurement' />
-      <input id='measurement-button' type='button' value='add measurement' />
+      <input id='measurement-button' type='button' value='' />
     </form>
     <br>
     average: <code id='current-average'></code>
     <hr>
-    <button id='close-button'>close measurements</button>
+    <button id='close-open-button'></button>
     <button id='reset-button'>reset measurements</button>
   </section>
 
   <script src='./listeners/add.js'></script>
   <script src='./listeners/reset.js'></script>
-  <script src='./listeners/close.js'></script>
+  <script src='./listeners/close-open.js'></script>
 </body>
 
 </html>

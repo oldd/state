@@ -8,7 +8,7 @@ function resetHandler() {
 
   // log user interaction
   log.push({
-    userStory: 'reset',
+    handler: 'reset',
     numbers: JSON.parse(JSON.stringify(numbers))
   })
 }

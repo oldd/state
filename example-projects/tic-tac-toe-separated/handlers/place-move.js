@@ -19,7 +19,7 @@ function placeMove(event) {
 
   // log action
   log.push({
-    userStory: 'place move',
+    handler: 'place move',
     index,
     game: JSON.parse(JSON.stringify(game))
   })

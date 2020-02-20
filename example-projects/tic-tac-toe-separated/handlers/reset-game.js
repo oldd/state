@@ -15,7 +15,7 @@ function resetGame() {
 
   // log action
   log.push({
-    userStory: 'reset board',
+    handler: 'reset board',
     game: JSON.parse(JSON.stringify(game))
   })
 }

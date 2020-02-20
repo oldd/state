@@ -17,7 +17,7 @@ function resetMeasurementsHandler() {
 
   // log action
   log.push({
-    userStory: 'reset measurements',
+    handler: 'reset measurements',
     measurements: JSON.parse(JSON.stringify(measurements))
   })
 
