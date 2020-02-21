@@ -16,6 +16,8 @@ console.assert(arrayTwo !== arrayOne, 'arrayTwo !== arrayOne');
 console.assert(arrayTwo[0] === arrayOne[0], 'arrayTwo[0] === arrayOne[0]');
 console.assert(arrayTwo[1] === arrayOne[1], 'arrayTwo[1] === arrayOne[1]');
 
+arrayTwo.push('huh?');
+console.assert(arrayOne[2] === undefined, 'arrayOne does not change when arrayTwo does');
 
 // examples with objects
 
@@ -31,3 +33,6 @@ const objectTwo = { first: 'hi', second: 'bye' };
 console.assert(objectTwo !== objectOne, 'objectTwo !== objectOne');
 console.assert(objectTwo.first === objectOne.first, 'objectTwo.first === objectOne.first');
 console.assert(objectTwo.second === objectOne.second, 'objectTwo.second === objectOne.second');
+
+objectTwo.h = 'uh?';
+console.assert(objectOne.h === undefined, 'objectOne does not change when objectTwo does');

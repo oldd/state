@@ -661,7 +661,7 @@ codeAlong.js = (iframe, steps, config) => {
   collapsedOutput.appendChild(unCollapseOutputButton);
 
   if (typeof title === 'string') {
-    const titleEl = document.createElement('h1');
+    const titleEl = document.createElement('h3');
     titleEl.innerHTML = title;
     titleEl.style = 'text-align: center; margin-top: 0%;margin-bottom: 0%;';
     collapsedOutput.appendChild(titleEl);
