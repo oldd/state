@@ -312,7 +312,7 @@ codeAlong.document = (iframe, steps, config) => {
   outputEl.src = "data:text/html;charset=utf-8," + encodeURIComponent(steps[0].code);
 
   const outputContainer = document.createElement('div');
-  outputContainer.style = 'height: 98vh; width: 40vw; border:solid 1px; padding-left:1%; padding-right:1%;';
+  outputContainer.style = 'height: 98vh; width: 45vw; border:solid 1px; padding-left:1%; padding-right:1%;';
   if (typeof title === 'string') {
     const titleEl = document.createElement('h1');
     titleEl.innerHTML = title;
@@ -502,7 +502,46 @@ codeAlong.js = (iframe, steps, config) => {
   buttonDiv.appendChild(evaluateInDebugger);
   buttonDiv.appendChild(maxIterationsForm);
   buttonDiv.appendChild(document.createElement('br'));
-  buttonDiv.appendChild(jsTutorButton);
+  if (!config.async === true) {
+    buttonDiv.appendChild(jsTutorButton);
+  }
+  try {
+    // does it exist?
+    prettier.format(
+      '',
+      {
+        parser: "babylon",
+        plugins: prettierPlugins
+      }
+    );
+
+    const formatCode = document.createElement('button');
+    formatCode.innerHTML = 'find syntax errors';
+    formatCode.addEventListener('click', () => {
+      try {
+        prettier.format(
+          editor.getValue(),
+          {
+            parser: "babylon",
+            plugins: prettierPlugins
+          }
+        );
+        const allGoodPre = document.createElement('pre');
+        allGoodPre.innerHTML = '  no syntax errors found';
+        allGoodPre.style = 'padding-left:5px;'
+        resultsContainer.innerHTML = '';
+        resultsContainer.appendChild(allGoodPre);
+      } catch (err) {
+        const errPre = document.createElement('pre');
+        errPre.innerHTML = err.message;
+        errPre.style = 'padding-left:5px;'
+        resultsContainer.innerHTML = '';
+        resultsContainer.appendChild(errPre);
+      }
+    });
+    buttonDiv.appendChild(formatCode);
+  } catch (e) { }
+
   try {
     // does it exist?
     js_beautify('', {
@@ -523,7 +562,7 @@ codeAlong.js = (iframe, steps, config) => {
   } catch (e) { }
 
   buttonDiv.appendChild(linterButton);
-  buttonDiv.appendChild(buttonsButton);
+  // buttonDiv.appendChild(buttonsButton);
 
 
 
@@ -543,7 +582,7 @@ codeAlong.js = (iframe, steps, config) => {
     outputContainer.innerHTML = '';
     outputContainer.appendChild(collapsedOutput);
     // outputContainer.style = 'height: 5vh; width: 98vw; z-index: 100; position: absolute; bottom: 3vh;';
-    outputContainer.style = 'height: 5vh; width: 55vw; z-index: 100; position: absolute; bottom: 3vh; left: 45vw;';
+    outputContainer.style = '  z-index: 100; position: absolute; bottom: 0px; right: 0px;';
     editorContainer.style = 'height:92vh;width:94vw;';
     editor.resize();
   };
@@ -574,7 +613,7 @@ codeAlong.js = (iframe, steps, config) => {
   const renderUnCollapsed = () => {
     outputContainer.innerHTML = '';
     outputContainer.appendChild(visibleContainer);
-    outputContainer.style = 'height: 96vh; width: 55vw;';
+    outputContainer.style = 'height: 96vh; width: 45vw;';
     editorContainer.style = 'height:92vh;width:55vw;';
     editor.resize();
   };
@@ -621,8 +660,15 @@ codeAlong.js = (iframe, steps, config) => {
   collapsedOutput.appendChild(maxIterationsFormCopy);
   collapsedOutput.appendChild(unCollapseOutputButton);
 
+  if (typeof title === 'string') {
+    const titleEl = document.createElement('h1');
+    titleEl.innerHTML = title;
+    titleEl.style = 'text-align: center; margin-top: 0%;margin-bottom: 0%;';
+    collapsedOutput.appendChild(titleEl);
+  }
+
   const outputContainer = document.createElement('div');
-  outputContainer.style = 'height: 96vh; width: 55vw;';
+  outputContainer.style = 'height: 96vh; width: 45vw;';
   if (config.collapsed === true) {
     renderCollapsed();
   } else {
@@ -691,12 +737,11 @@ codeAlong.with_infinite_loop_guard = function with_infinite_loop_guard(your_sour
 
 codeAlong.preparing_your_code = function (your_source_code) {
   const resultsEl = document.createElement('ol');
-  // console.clear();
 
-  const nativeAssert = console.assert;
+  const nativeConsole = console;
+  console = Object.create(nativeConsole);
   console.assert = function () {
-
-    nativeAssert(...Array.from(arguments));
+    nativeConsole.assert(...Array.from(arguments));
 
     const statusString = arguments[0] ? 'PASS: ' : 'FAIL: ';
     const statusEl = document.createElement('p');
@@ -720,7 +765,61 @@ codeAlong.preparing_your_code = function (your_source_code) {
 
   }
 
-  const renderError = (err) => {
+  // for capturing and displaying async errors
+  {
+    // console.error = function () {
+    //   nativeConsole.error('- logged with console.error -\n', ...Array.from(arguments));
+
+    //   const before = document.createElement('pre');
+    //   before.innerHTML = '- begin console.error -';
+    //   resultsEl.appendChild(before);
+
+    //   if (arguments[0] instanceof Error) {
+    //     resultsEl.appendChild(renderError(arguments[0], true));
+    //     arguments = Array.from(arguments).splice(1, arguments.length);
+    //   }
+
+    //   if (arguments.length !== 0) {
+    //     const messages = document.createElement('code');
+    //     messages.innerHTML = Array.from(arguments)
+    //       .toString()
+    //       .replace(',', ', ');
+    //     messages.style.color = 'red';
+
+    //     resultsEl.appendChild(messages);
+    //   }
+
+    //   const after = document.createElement('pre');
+    //   after.innerHTML = '- end console.error -';
+    //   resultsEl.appendChild(after);
+
+    // }
+
+    // // debugger;
+    // // declare this at the top of each example
+    // const startTime = (new Date()).getTime();
+    // const elapsed = () => {
+    //   const now = (new Date()).getTime();
+    //   return Math.round(now - startTime) + ' ms';
+    // };
+
+
+    // const requestURL = "https://hacyourfuure.be/practice-api/food/wet/soups.json";
+
+    // fetch(requestURL)
+    //   .then(function parseResponse(resp) { return resp.json() })
+    //   .then(function workWithData(data) {
+    //     // write me!
+    //   })
+    //   .then(function assertResult(result) {
+    //     console.assert(result === 3, elapsed() + ' - result should be 3');
+    //   })
+    //   .catch(function handleErrors(err) {
+    //     console.error(err, elapsed() + ' - Test 2', 223)
+    //   });
+  }
+
+  const renderError = (err, noCallstackMessage) => {
     const errorEl = document.createElement('pre');
     errorEl.style.color = "red";
     const duckDuckLink = document.createElement('a');
@@ -731,7 +830,9 @@ codeAlong.preparing_your_code = function (your_source_code) {
     const searchButton = document.createElement('button');
     searchButton.appendChild(duckDuckLink)
     errorEl.appendChild(searchButton);
-    errorEl.appendChild(document.createTextNode('\n\n   callstack is logged to the console'));
+    if (!noCallstackMessage) {
+      errorEl.appendChild(document.createTextNode('\n\n   callstack is logged to the console'));
+    }
     return errorEl;
   }
   const renderHaltingWarning = (err) => {
@@ -756,7 +857,7 @@ codeAlong.preparing_your_code = function (your_source_code) {
       return `let __${id} = 0;${loopHead}if (++__${id} > 1000) throw new Error('Loop exceeded 1000 iterations');`
     });
     (function editor() {
-      eval('(function executing_prepared_code() { didExecute.status = true;' + loopDetected + '})();');
+      eval('(function executing_prepared_code(console) { didExecute.status = true;' + loopDetected + '\n})(console);');
     })();
   } catch (err) {
     const errOrWarning = err.message === 'Loop exceeded 1000 iterations'
@@ -767,8 +868,7 @@ codeAlong.preparing_your_code = function (your_source_code) {
     console.error(err);
   }
 
-  console.assert = nativeAssert;
-  // console.log = nativeLog;
+  console = nativeConsole;
 
   return resultsEl;
 

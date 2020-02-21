@@ -1,0 +1,87 @@
+{
+  "projects": [
+    {
+      "name": "state-week-1-project",
+      "live": true,
+      "endpoints": [
+        "development-strategy.md"
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "name": "FCC: Basic Data Structures",
+      "live": "https://freecodecamp.org/<user-name>",
+      "source": false
+    },
+    {
+      "name": "FCC: Basic Algorithm Scripting",
+      "live": "https://freecodecamp.org/<user-name>",
+      "source": false
+    },
+    {
+      "name": "js-exercises",
+      "live": false,
+      "endpoints": [
+        "week-3",
+        "week-3-practice"
+      ]
+    },
+    {
+      "name": "dom-manipulation",
+      "live": true,
+      "endpoints": [
+        "exercises"
+      ]
+    },
+    {
+      "name": "listeners-and-handlers",
+      "live": true,
+      "endpoints": [
+        "exercise-1",
+        "exercise-2",
+        "exercise-3"
+      ]
+    },
+    {
+      "name": "handler-refactors",
+      "live": true,
+      "endpoints": [
+        "duck-duck-search",
+        "hex-setter",
+        "sub-string",
+        "hovercraft",
+        "type-caster"
+      ]
+    },
+    {
+      "name": "using-user-input",
+      "live": true,
+      "endpoints": [
+        "1-fill-in-the-blanks",
+        "2-fix-the-bugs",
+        "3-from-spec",
+        "4-open-ended"
+      ]
+    },
+    {
+      "name": "js-exercises-tdd",
+      "live": false,
+      "endpoints": [
+        "I.pass-tests",
+        "II.write-tests",
+        "III.tdd-katas"
+      ]
+    },
+    {
+      "name": "Practice Sunday lesson plan exercises",
+      "live": "https://hackyourfuture.be/state",
+      "source": false,
+      "endpoints": [
+        "week-1",
+        "week-2",
+        "week-3"
+      ]
+    }
+  ]
+}

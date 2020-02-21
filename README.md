@@ -6,8 +6,8 @@
   </a>
 </div>
 
-> "... a computer program stores data in variables, which represent storage locations in the computer's memory. The contents of these memory locations, at any given point in the program's execution, is called the program's state."
-> * [Wikipedia](https://en.wikipedia.org/wiki/State_(computer_science)#Program_state)
+> "In information technology and computer science, a system is described as stateful if it is designed to remember preceding events or user interactions; the remembered information is called the state of the system."
+> * [Wikipedia](https://en.wikipedia.org/wiki/State_(computer_science))
 
 ### Overview
 
