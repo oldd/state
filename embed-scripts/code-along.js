@@ -516,7 +516,7 @@ codeAlong.js = (iframe, steps, config) => {
     );
 
     const formatCode = document.createElement('button');
-    formatCode.innerHTML = 'find syntax errors';
+    formatCode.innerHTML = 'first syntax error';
     formatCode.addEventListener('click', () => {
       try {
         prettier.format(
