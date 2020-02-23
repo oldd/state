@@ -7,9 +7,10 @@ function resetHandler() {
   document.getElementById('current-number').innerHTML = numbers.current;
 
   // log user interaction
+  const copiedState = JSON.parse(JSON.stringify(numbers));
   log.push({
     handler: 'reset',
-    numbers: JSON.parse(JSON.stringify(numbers))
-  })
+    numbers: copiedState
+  });
 }
 

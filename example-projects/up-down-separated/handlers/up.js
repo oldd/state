@@ -8,9 +8,10 @@ function up() {
   document.getElementById('current-number').innerHTML = numbers.current;
 
   // log action for developers
+  const copiedState = JSON.parse(JSON.stringify(numbers));
   log.push({
     handler: 'up',
-    numbers: JSON.parse(JSON.stringify(numbers))
+    numbers: copiedState
   });
 }
 

@@ -24,7 +24,10 @@
   </script>
   <script id='init'>
     window.onload = function () {
-      log.push({ initialNumbers: JSON.parse(JSON.stringify(numbers)) });
+      // log initial state
+      // creating a copy so the log entry does not change later with side-effects
+      const copiedState = JSON.parse(JSON.stringify(numbers));
+      log.push({ initialNumbers: copiedState });
       document.getElementById('current-number').innerHTML = numbers.current;
     }
   </script>
@@ -34,9 +37,10 @@
       numbers.past.push(numbers.current);
       numbers.current += 1;
       document.getElementById('current-number').innerHTML = numbers.current;
+      const copiedState = JSON.parse(JSON.stringify(numbers));
       log.push({
         handler: 'up',
-        numbers: JSON.parse(JSON.stringify(numbers))
+        numbers: copiedState
       });
     }
     function down() {
@@ -44,9 +48,10 @@
       numbers.past.push(numbers.current);
       numbers.current -= 1;
       document.getElementById('current-number').innerHTML = numbers.current;
+      const copiedState = JSON.parse(JSON.stringify(numbers));
       log.push({
         handler: 'down',
-        numbers: JSON.parse(JSON.stringify(numbers))
+        numbers: copiedState
       });
     }
     function resetHandler() {
@@ -54,10 +59,11 @@
       numbers.current = 0;
       numbers.past = [];
       document.getElementById('current-number').innerHTML = numbers.current;
+      const copiedState = JSON.parse(JSON.stringify(numbers));
       log.push({
         handler: 'reset',
-        numbers: JSON.parse(JSON.stringify(numbers))
-      })
+        numbers: copiedState
+      });
     }
   </script>
 </head>

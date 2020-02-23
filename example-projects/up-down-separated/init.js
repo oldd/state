@@ -1,7 +1,8 @@
 window.onload = () => {
   debugger;
   // log initial state
-  log.push({ initialNumbers: JSON.parse(JSON.stringify(numbers)) });
+  const copiedState = JSON.parse(JSON.stringify(numbers));
+  log.push({ initialNumbers: copiedState });
 
   // render initial UI from state
   document.getElementById('current-number').innerHTML = numbers.current;
