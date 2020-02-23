@@ -16,6 +16,8 @@ console.assert(arrayTwo !== arrayOne, 'arrayTwo !== arrayOne');
 console.assert(arrayTwo[0] === arrayOne[0], 'arrayTwo[0] === arrayOne[0]');
 console.assert(arrayTwo[1] === arrayOne[1], 'arrayTwo[1] === arrayOne[1]');
 
+alsoArrayOne.push('mega');
+console.assert(arrayTwo[2] === undefined, 'arrayTwo does not change when arrayOne does');
 arrayTwo.push('huh?');
 console.assert(arrayOne[2] === undefined, 'arrayOne does not change when arrayTwo does');
 
@@ -34,5 +36,8 @@ console.assert(objectTwo !== objectOne, 'objectTwo !== objectOne');
 console.assert(objectTwo.first === objectOne.first, 'objectTwo.first === objectOne.first');
 console.assert(objectTwo.second === objectOne.second, 'objectTwo.second === objectOne.second');
 
+
+alsoObjectOne.m = 'ega';
+console.assert(alsoObjectTwo.m === undefined, 'objectTwo does not change when objectOne does');
 objectTwo.h = 'uh?';
 console.assert(objectOne.h === undefined, 'objectOne does not change when objectTwo does');
