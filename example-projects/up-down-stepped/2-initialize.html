@@ -23,8 +23,9 @@
     const log = [];
   </script>
   <script id='init'>
-    window.onload = () => {
+    window.onload = function () {
       // log initial state
+      // creating a copy so the log entry does not change later with side-effects
       log.push({ initialNumbers: JSON.parse(JSON.stringify(numbers)) });
       // render UI from initial state
       document.getElementById('current-number').innerHTML = numbers.current;

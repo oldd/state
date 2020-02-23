@@ -1,4 +1,6 @@
 console.log('\n--- array challenge: 1 ---');
+// psst.  use JS Tutor & the debugger!
+
 
 ; // declare and assign array1
 ; // declare and assign array2
@@ -6,16 +8,14 @@ console.log('\n--- array challenge: 1 ---');
 const areTheSameArray = array1 === array2;
 const sameZeroValue = array1[0] === array2[0];
 const zeroValueIsHi = array1[0] === 'hi';
-console.assert(areTheSameArray, 'Test 1 - areTheSameArray');
-console.assert(sameZeroValue, 'Test 2 - sameZeroValue');
-console.assert(zeroValueIsHi, 'Test 3 - zeroValueIsHi');
+console.assert(areTheSameArray && sameZeroValue && zeroValueIsHi, 'Test 1');
+
 
 
 const index = 1;
-// pass the next texts
+// pass the next test
 
 
 const arraysIndexAreSame = array1[index] === array2[index];
 const array1IndexIsBye = array1[index] === 'bye';
-console.assert(arraysIndexAreSame, 'Test 4 - arraysIndexAreSame');
-console.assert(array1IndexIsBye, 'Test 5 - array1IndexIsBye');
+console.assert(arraysIndexAreSame && array1IndexIsBye, 'Test 2');
