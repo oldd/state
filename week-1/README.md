@@ -77,7 +77,9 @@ Starting with the exercises will make it easier to complete the project.  Spendi
 * (_Integrate_) Fork [practice-and-learn-the-dom](https://github.com/tutsplus/practice-javascript-and-learn-the-dom)
 * (_Integrate_) Fork [using-user-input](https://github.com/hackyourfuturebelgium/using-user-input)
 
-### Project: Biggest & Smallest
+### Project
+
+__Biggest & Smallest__
 
 > [Starter Code](http://hackyourfuture.be/homework-submission/#projects)
 
