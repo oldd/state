@@ -89,13 +89,15 @@ This week's project is to create a small application that allows a user to inter
 * Always have your Debugger open.  Take the time to step through each time you program pauses.
 * Check the `log` very often!  It's kind of like the debugger, but for your application.  The Debugger allows you to watch memory change in a single function, the `log` lets you see memory change over time in your whole project.
 
-Besides passing the tests, this week you should spend plenty of time practicing [stepping through in the debugger](https://javascript.info/debugging-chrome).  The starter code has `debugger` statements already in place to pause your website whenever an event occurs. It might feel a bit slow, but do take the time to step through the test cases and user interactions. Tracing execution like this will help you to understand working with arrays & objects, how functions work, and how the logic of your solution works.  You should especially step through your code _before_ you have passed the tests!  The debugger is there to help you understand what your code _does_ do (instead of what you _want_ it to do) and to find your mistakes.
+Besides just making the project work, this week you should spend plenty of time practicing [stepping through in the debugger](https://javascript.info/debugging-chrome).  The starter code has `debugger` statements already in place to pause your website whenever an event occurs. It might feel a bit slow, but do take the time to step through the test cases and user interactions. Tracing execution like this will help you to understand working with arrays & objects, how functions work, and how the logic of your solution works.  
+
+You should especially step through your code _before_ you have it all working!  The debugger is there to help you understand what your code _does_ do (instead of what you _want_ it to do) and to find your mistakes.
 
 Your completed project repository must contain:
 
 1. A README describing your project in detail.  Check out these articles to learn more about writing good README's: [makeareadme.com](https://www.makeareadme.com/), [bulldogjob](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project), [meakaakka](https://medium.com/@meakaakka/a-beginners-guide-to-writing-a-kickass-readme-7ac01da88ab3)
 1. One branch for each step of your development, as practiced in class.
-1. A live demo with: 0 failing asserts, 5 working buttons
+1. A live demo with no errors
 
 ---
 ---
