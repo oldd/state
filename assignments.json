@@ -1,7 +1,7 @@
 {
   "projects": [
     {
-      "name": "state-week-1-project",
+      "name": "biggest-and-smallest",
       "live": true,
       "endpoints": [
         "development-strategy.md"
