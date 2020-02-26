@@ -5,8 +5,16 @@
   <meta charset='utf-8'>
   <title>Summary & Details</title>
   <style></style>
-  <script id='state'></script>
-  <script id='log'></script>
+  <script id='data'>
+    const componentInfo = {
+      detailsText: '',
+      summaryText: '',
+      isOpen: false
+    }
+  </script>
+  <script id='log'>
+    const log = [];
+  </script>
   <script id='init'></script>
   <script id='handlers'></script>
 </head>

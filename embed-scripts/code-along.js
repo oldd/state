@@ -333,6 +333,34 @@ codeAlong.document = (iframe, steps, config) => {
 
 }
 
+codeAlong.md = (iframe, steps, config) => {
+
+  const loadingMdStyles = new Promise((resolve, reject) => {
+    const ghMdStyle = document.createElement('link');
+    ghMdStyle.type = 'text/css';
+    ghMdStyle.setAttribute('rel', 'stylesheet');
+    ghMdStyle.setAttribute('href', '../embed-scripts/github-markdown.css');
+
+    ghMdStyle.addEventListener('load', () => resolve());
+    ghMdStyle.addEventListener('error', (e) => reject(e.message))
+
+    frameDocument.head.appendChild(ghMdStyle);
+  });
+
+  const loadingMarked = new Promise((resolve, reject) => {
+    const markedScript = document.createElement('script');
+    markedScript.src = "../embed-scripts/marked.js";
+    markedScript.type = "text/javascript";
+    markedScript.charset = "utf-8";
+
+    markedScript.addEventListener('load', () => resolve());
+    markedScript.addEventListener('error', (e) => reject(e.message))
+
+    frameDocument.head.appendChild(markedScript);
+  });
+
+}
+
 codeAlong.js = (iframe, steps, config) => {
 
   const title = config.title;
@@ -342,7 +370,8 @@ codeAlong.js = (iframe, steps, config) => {
   const editorContainer = document.createElement('div');
   editorContainer.style = 'height:98vh;width:55vw;';
 
-  const ace = iframe.contentWindow.ace;
+  // const ace = iframe.contentWindow.ace;
+  const ace = ace;
   const editor = ace.edit(editorContainer);
   editor.setTheme('ace/theme/chrome');
   editor.setFontSize(12);

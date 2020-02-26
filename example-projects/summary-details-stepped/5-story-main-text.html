@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <title>Summary & Details</title>
+  <style></style>
+  <script id='data'>
+    const componentInfo = {
+      summaryText: 'words',
+      mainText: 'words words words',
+      isOpen: false
+    }
+  </script>
+  <script id='log'>
+    const log = [];
+  </script>
+  <script id='init'>
+    window.onload = function () {
+      debugger;
+      const detailsEl = document.getElementById('component');
+      detailsEl.open = componentInfo.isOpen;
+      detailsEl.children[0].innerHTML = componentInfo.summaryText;
+      detailsEl.children[1].innerHTML = componentInfo.mainText;
+      log.push({ initialComponentInfo: JSON.parse(JSON.stringify(componentInfo)) });
+    }
+  </script>
+  <script id='handlers'>
+    function openCloseHandler() {
+      debugger;
+      const newIsOpen = document.getElementById('toggle-is-open').checked;
+      componentInfo.isOpen = newIsOpen;
+      document.getElementById('component').open = componentInfo.isOpen;
+      log.push({
+        handler: 'open, close',
+        newIsOpen,
+        componentInfo: JSON.parse(JSON.stringify(componentInfo))
+      })
+    }
+    function summaryTextHandler() {
+      debugger;
+      const newSummaryText = document.getElementById('new-summary-text').value;
+      componentInfo.summaryText = newSummaryText;
+      const summaryEl = document.getElementById('component').children[0];
+      summaryEl.innerHTML = componentInfo.summaryText;
+      const copyOfState = JSON.parse(JSON.stringify(componentInfo));
+      log.push({
+        handler: 'summary text',
+        newSummaryText,
+        componentInfo: copyOfState
+      })
+    }
+    function mainTextHandler() {
+      debugger;
+      // read user input
+      const newMainText = document.getElementById('new-main-text').value;
+      // update state
+      componentInfo.mainText = newMainText;
+      // update UI from state
+      const detailsEl = document.getElementById('component');
+      const pEl = detailsEl.children[1];
+      pEl.innerHTML = componentInfo.mainText;
+      // log interaction
+      const copyOfState = JSON.parse(JSON.stringify(componentInfo));
+      log.push({
+        handler: 'main text',
+        newMainText,
+        componentInfo: copyOfState
+      })
+    }
+  </script>
+</head>
+
+<body>
+  <section id='user-interface'>
+    is open: <input type='checkbox' id='toggle-is-open' /> <br>
+    summary text: <input type='text' id='new-summary-text' />
+    <button id='update-summary-text'>update</button> <br>
+    main text: <input type='text' id='new-main-text' />
+    <button id='update-main-text'>update</button>
+    <hr>
+    <details id='component'>
+      <summary></summary>
+      <p></p>
+    </details>
+  </section>
+
+  <script id='listeners'>
+    document.getElementById('toggle-is-open').addEventListener('change', openCloseHandler);
+    document.getElementById('update-summary-text').addEventListener('click', summaryTextHandler);
+    document.getElementById('update-main-text').addEventListener('click', mainTextHandler);
+  </script>
+</body>
+
+</html>

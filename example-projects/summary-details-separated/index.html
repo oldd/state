@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <title>Summary & Detail</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src='./data/component-info.js'></script>
+  <script src='./log.js'></script>
+  <script src='./init.js'></script>
+
+  <script src='./handlers/open-close.js'></script>
+  <script src='./handlers/summary-text.js'></script>
+  <script src='./handlers/main-text.js'></script>
+</head>
+
+<body>
+  <section id='user-interface' class='centered'>
+    is open: <input type='checkbox' id='toggle-is-open' /> <br>
+    summary text: <input type='text' id='new-summary-text' />
+    <button id='update-summary-text'>update</button> <br>
+    main text: <input type='text' id='new-main-text' />
+    <button id='update-main-text'>update</button>
+    <hr>
+    <details id='component'>
+      <summary></summary>
+      <p></p>
+    </details>
+  </section>
+
+  <script src='./listeners/open-close.js'></script>
+  <script src='./listeners/summary-text.js'></script>
+  <script src='./listeners/main-text.js'></script>
+</body>
+
+</html>
