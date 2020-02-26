@@ -19,7 +19,10 @@
   * [Prep Work](./week-1#prep-work)
   * [Lesson Plan](https://hackyourfuture.be/state/week-1)
   * [Assignments](./week-1#assignments)
-* Week 2
+* [Week 2](./week-2)
+  * [Prep Work](./week-2#prep-work)
+  * [Lesson Plan](https://hackyourfuture.be/state/week-2)
+  * [Assignments](./week-2#assignments)
 * Week 3
 * [Deeper Dives](./deeper-dives.md)
 * [Class Recordings](./class-recordings.md)
@@ -45,7 +48,6 @@ Your new projects will be more interesting, but they will also be a lot more com
 
 * Documenting your projects with ...
   * _READMEs_ for why your project exists and how to run it
-  * _schemas_ to describe data in your program (data/state)
   * _wireframes_ to describe the user interface (html & css)
   * _user stories_ to define the interactions a user can have (handlers & listeners)
   * _tests_ & _specs_ to describe the logic in your program (logic)
@@ -55,9 +57,6 @@ Your new projects will be more interesting, but they will also be a lot more com
 * Data-first development
   * Understanding applications as Data + User Interactions
   * Developing from the "inside" out: planning the data & logic of your app without a user interface
-  * Explain what a schema is and why it's useful (PS. it's like tests, but for data!)
-  * Use the JSON schema specification to document your program's data
-  * Use a schema validation library to grantee the integrity of your project's data
 * Debugging:
   * Bugs are when you don't understand what your code is doing, not when your code doesn't understand what you want it to do!  The computer is always right :)
   * Stepping through your programs with the Browser and Node.js debuggers
@@ -129,9 +128,12 @@ In this module you'll be flipping everything upside down! In previous modules yo
 A working project is not enough! For projects in this module we will expect you to turn in code that is well organized & documented according to it's role.  Your projects should have these directories:
 
 * `/data`: contains your schema, initial state, and a helpful README (including a description of your data)
-* `/scripts`: constains your logic, handlers, listeners, and a README describing what is in each file
-* `/styles`: contains the CSS for your web page and a helpful README (including documentation of your classes & styles)
+* `/logic`: contains any functions and tests, and a README describing what is in each file
+* `/handlers`: contains the handlers for your app, one per user story.  and a helpful README
+* `/listeners`: contains the listeners for your app, generally one per user story, and a helpful README
+* `style.css`: contains the CSS for your web page and any helpful comments
 * `index.html`: contains the initial DOM for your user interface & requires all scripts
+* `init.js`: contains the code to render your initial UI and log the initial state
 * `log.js`: contains the initial empty log for your project.  For now, just an empty array
 * `README.md`: describes what your project does & how to use it.
 * `development-strategy.md`: a file containing a table of your user stories in order, with one column for each folder.

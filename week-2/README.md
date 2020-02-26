@@ -1,4 +1,4 @@
-# State, Week 1
+# State, Week 2
 
 * [Prep Work](#prep-work)
 * [Lesson Plan](#lesson-plan)
@@ -10,30 +10,23 @@
 
 ## Prep Work
 
-### What is State?
-
-* [Stack Overflow](https://softwareengineering.stackexchange.com/questions/150120/definition-of-state)
-
-### Objects & Arrays
-
-* [Reference vs. Value (Mosh video)](https://www.youtube.com/watch?v=fD0t_DKREbE)
-* [Reference vs. Value (CodeBurst article)](https://codeburst.io/javascript-passing-by-value-vs-reference-explained-in-plain-english-8d00fd06a47c)
-
 ### DOM Manipulation
 
+* [Traversy DOM Crash Course](https://www.youtube.com/watch?v=0ik6X4DJKCc) - it's long, no need to finish it before Sunday
+* [JS Dom Tutorials: Accessing The DOM](https://dom-tutorials.appspot.com/static/index.html)
 * [DOM Tree (js.info)](https://javascript.info/dom-nodes)
 * [Walking the DOM (js.info)](https://javascript.info/dom-navigation)
 * [getElement & querySelector (js.info)](https://javascript.info/searching-elements-dom)
 
 ### Sunday Lesson Plan
 
-Study the [Sunday lesson plan](https://hackyourfuture.be/state/week-1) so you come prepared. It's not possible to learn everything in 4 hours, the more prepared you are the more you will benefit from class!
+Study the [Sunday lesson plan](https://hackyourfuture.be/state/week-2) so you come prepared. It's not possible to learn everything in 4 hours, the more prepared you are the more you will benefit from class!
 
 ---
 
 ## Lesson Plan
 
-* [Slide show is right here](https://hackyourfuture.be/state/week-1) - Be sure to look over the slides before coming in on Sunday!
+* [Slide show is right here](https://hackyourfuture.be/state/week-2) - Be sure to look over the slides before coming in on Sunday!
 
 ---
 
@@ -50,24 +43,13 @@ Starting with the exercises will make it easier to complete the project.  Spendi
 * Continue the FreeCodeCamp JavaScript exercises
   * Sign into FreeCodeCamp using your GitHub Account
   * Turn on your Public Profile
-  * Complete [Basic Data Structures](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/)
-  * Begin [Basic Algorithm Scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/)
-* Fork [JS Exercises](https://github.com/CodeYourFuture/js-exercises/)
-  * Solve the Exercises in the folders called `week-3`, and `week-3-practice`.
-  * You will need to run these exercises [in Node.js](https://www.youtube.com/watch?v=DsH-fizHkcY), but don't be intimidated!  This is actually a very simple way to run your code.  With a little practice using `cd` and `ls` from the command line you'll be good to go!
-  * VSC comes built-in with a very good [JavaScript debugger](https://www.youtube.com/watch?v=DsH-fizHkcY) that will help you to step through your code and understand what is happening inside your program.  At first this will be a bit intimidating, but soon you'll wonder how you ever programmed without it.
+  * Continue [Basic Algorithm Scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/)
 
 #### Integrating JavaScript
 
-* Fork [dom-manipulation](https://github.com/hackyourfuturebelgium/dom-manipulation)
-  * Turn on GitHub Pages
-  * Push your work regularly, so you can ask questions with issues!
-* Fork [listeners-and-handlers](https://github.com/hackyourfuturebelgium/listeners-and-handlers)
-  * Turn on GitHub Pages
-  * Push your work regularly, so you can ask questions with issues!
-* Fork [handler-refactors](https://github.com/hackyourfuturebelgium/handler-refactors)
-  * Turn on GitHub Pages
-  * Push your work regularly, so you can ask questions with issues!
+* [JS DOM Tutorials](https://dom-tutorials.appspot.com/static/index.html):
+  * Tutorial 1: Accessing the DOM
+  * Tutorial 2: Manipulating the DOM
 
 #### Challenge Exercises
 
@@ -77,9 +59,9 @@ Starting with the exercises will make it easier to complete the project.  Spendi
 * (_Integrate_) Fork [practice-and-learn-the-dom](https://github.com/tutsplus/practice-javascript-and-learn-the-dom)
 * (_Integrate_) Fork [using-user-input](https://github.com/hackyourfuturebelgium/using-user-input)
 
-### Project: Biggest & Smallest
+### Project: `rock-paper-scissors`
 
-> [Starter Code](http://hackyourfuture.be/homework-submission/#projects)
+> [Code-Along](http://hackyourfuture.be/homework-submission/#code-along)
 
 This week's project is to create a small application that allows a user to interact with data saved in your website. Your goal should be to learn how to incrementally develop, log and debug your project.  Don't worry so much about making pretty or making quick progress, a finished app is not the goal! To get started [fork this repository](https://github.com/HackYourFutureBelgium/biggest-and-smallest), clone it and open the code in VSC.  Here are some tips:
 
