@@ -28,6 +28,17 @@
       ]
     },
     {
+      "name": "early-return",
+      "live": false,
+      "endpoints": [
+        "2-integrate/1-sum-all-report.txt",
+        "2-integrate/2-return-as-numbers-report.txt",
+        "2-integrate/3-find-evens-report.txt",
+        "2-integrate/4-find-odds-report.txt",
+        "2-integrate/5-sum-numberys-report.txt"
+      ]
+    },
+    {
       "name": "dom-manipulation",
       "live": true,
       "endpoints": [

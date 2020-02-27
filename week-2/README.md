@@ -44,6 +44,11 @@ Starting with the exercises will make it easier to complete the project.  Spendi
   * Sign into FreeCodeCamp using your GitHub Account
   * Turn on your Public Profile
   * Continue [Basic Algorithm Scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/)
+* Fork [early-return](https://github.com/hackyourfuturebelgium/early-return)
+  * Solve each exercise on a separate branch
+  * complete the `1-isolate` exercises for your own practice
+  * complete the `2-integrate` exercises for you coaches to check
+  * be sure to merge to master and push your report files for us to check
 
 #### Integrating JavaScript
 
