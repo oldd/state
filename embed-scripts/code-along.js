@@ -370,8 +370,8 @@ codeAlong.js = (iframe, steps, config) => {
   const editorContainer = document.createElement('div');
   editorContainer.style = 'height:98vh;width:55vw;';
 
-  // const ace = iframe.contentWindow.ace;
-  const ace = ace;
+  const ace = iframe.contentWindow.ace;
+  // const ace = ace;
   const editor = ace.edit(editorContainer);
   editor.setTheme('ace/theme/chrome');
   editor.setFontSize(12);
@@ -712,11 +712,14 @@ codeAlong.js = (iframe, steps, config) => {
 
 codeAlong.step_through_in_debugger = function in_debugger(your_source_code) {
   try {
-    eval(
-      'debugger; // injected by codeAlong\n'
-      + '\n'
-      + your_source_code
-    );
+    const executing_your_code = () => {
+      eval(
+        'debugger; // injected by codeAlong\n'
+        + '\n'
+        + your_source_code
+      );
+    };
+    executing_your_code();
   } catch (err) {
     console.log(err);
   };
