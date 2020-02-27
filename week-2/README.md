@@ -40,10 +40,9 @@ Starting with the exercises will make it easier to complete the project.  Spendi
 
 #### Isolating JavaScript
 
-* Continue the FreeCodeCamp JavaScript exercises
-  * Sign into FreeCodeCamp using your GitHub Account
-  * Turn on your Public Profile
-  * Continue [Basic Algorithm Scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/)
+* Fork [js-exercises-tdd](https://github.com/CodeYourFuture/js-exercises-tdd)
+  * complete the exercises in `I.pass-tests`
+  * solve each one on a separate branch and merge to master when they are complete
 * Fork [early-return](https://github.com/hackyourfuturebelgium/early-return)
   * Solve each exercise on a separate branch
   * complete the `1-isolate` exercises for your own practice
@@ -58,7 +57,7 @@ Starting with the exercises will make it easier to complete the project.  Spendi
 
 #### Challenge Exercises
 
-* (_Isolate_) Fork [js-exercises-tdd](https://github.com/CodeYourFuture/js-exercises-tdd)
+* (_Isolate_) Continue [Basic Algorithm Scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/)
 * (_Isolate_) Fork [javascript-exercises](https://github.com/TheOdinProject/javascript-exercises)
 * (_Integrate_) Fork [javascript-you__dom-exercises](https://github.com/omahacodeschool/javascript-toy__dom-exercises)
 * (_Integrate_) Fork [practice-and-learn-the-dom](https://github.com/tutsplus/practice-javascript-and-learn-the-dom)
