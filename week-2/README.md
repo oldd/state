@@ -63,11 +63,11 @@ Starting with the exercises will make it easier to complete the project.  Spendi
 * (_Integrate_) Fork [practice-and-learn-the-dom](https://github.com/tutsplus/practice-javascript-and-learn-the-dom)
 * (_Integrate_) Fork [using-user-input](https://github.com/hackyourfuturebelgium/using-user-input)
 
-### Project: `rock-paper-scissors`
+### Project: `numbery-and-nany`
 
-> [Code-Along](http://hackyourfuture.be/homework-submission/#code-along)
+> [Open Ended](http://hackyourfuture.be/homework-submission/#open-ended)
 
-This week's project is to create a small application that allows a user to interact with data saved in your website. Your goal should be to learn how to incrementally develop, log and debug your project.  Don't worry so much about making pretty or making quick progress, a finished app is not the goal! To get started [fork this repository](https://github.com/HackYourFutureBelgium/biggest-and-smallest), clone it and open the code in VSC.  Here are some tips:
+This week's project is to create a small application that allows a user to interact with data saved in your website. Your goal should be to learn how to incrementally develop, log and debug your project.  Don't worry so much about making pretty or making quick progress, a finished app is not the goal! To get started [fork the `nubmery-and-nany` repository](https://github.com/HackYourFutureBelgium/numbery-and-nany), clone it and open the code in VSC.  Here are some tips:
 
 * Go back and forth between VSC and your browser very often.  Every time you make a change in the code, refresh in the browser to test your code and check for any errors.
 * Always have your Debugger open.  Take the time to step through each time you program pauses.

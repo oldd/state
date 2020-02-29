@@ -39,6 +39,11 @@
       ]
     },
     {
+      "name": "Embedded DOM Tutorial",
+      "live": "https://dom-tutorials.appspot.com/static/index.html",
+      "source": false
+    },
+    {
       "name": "dom-manipulation",
       "live": true,
       "endpoints": [
