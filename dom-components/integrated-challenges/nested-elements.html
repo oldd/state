@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>nested elements</title>
+</head>
+
+<body>
+
+  <div id='examples'>
+    <div>
+      <a>
+        <button>
+          hello!
+        </button>
+      </a>
+    </div>
+    <section>
+      <pre>
+        <code>
+          good bye :(
+        </code>
+      </pre>
+    </section>
+    <header>
+      <footer>
+        <aside>
+          semantic?
+        </aside>
+      </footer>
+    </header>
+  </div>
+
+  <hr>
+
+  <div id='components'></div>
+
+  <script id='DOM manipulation script'>
+    debugger;
+
+    const nestedComponent = () => { }
+
+    const firstComponent = nestedComponent(__, __, __, __);
+    document.getElementById('components').appendChild(firstComponent);
+
+    const secondComponent = nestedComponent(__, __, __, __);
+    document.getElementById('components').appendChild(secondComponent);
+
+    const thirdComponent = nestedComponent(__, __, __, __);
+    document.getElementById('components').appendChild(thirdComponent);
+  </script>
+
+</body>
+
+</html>

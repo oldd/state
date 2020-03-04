@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>description list</title>
+</head>
+
+<body>
+
+  <div id='examples'>
+    <dl>
+      <dt>Beast of Bodmin</dt>
+      <dd>A large feline inhabiting Bodmin Moor.</dd>
+      <dt>Morgawr</dt>
+      <dd>A sea serpent.</dd>
+      <dt>Owlman</dt>
+      <dd>A giant owl-like creature.</dd>
+    </dl>
+    <dl>
+      <dt>A</dt>
+      <dd>1</dd>
+      <dt>B</dt>
+      <dd>2</dd>
+    </dl>
+  </div>
+
+  <hr>
+
+  <div id='components'></div>
+
+  <script id='DOM manipulation script'>
+    debugger;
+
+    const descriptionListComponent = (arr) => { }
+
+    const firstArgs = [['one', 'fish'], ['two', 'fish'], ['red', 'fish'], ['blue', 'fish']];
+    const firstComponent = descriptionListComponent(firstArgs);
+    document.getElementById('components').appendChild(firstComponent);
+
+    const secondArgs = [['title', 'description']];
+    const secondComponent = descriptionListComponent(secondArgs);
+    document.getElementById('components').appendChild(secondComponent);
+
+    const thirdArgs = [['(((', ')))'], ['{{{', '}}}'], ['[[[', ']]]']];
+    const thirdComponent = descriptionListComponent(thirdArgs);
+    document.getElementById('components').appendChild(thirdComponent);
+  </script>
+
+</body>
+
+</html>

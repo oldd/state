@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>linked button</title>
+</head>
+
+<body>
+
+  <div id='components'></div>
+
+  <script id='DOM manipulation script'>
+    debugger;
+
+    const linkedButton = (text, link) => {
+      const buttonEl = document.createElement('button');
+      buttonEl.innerHTML = text;
+
+      const aEl = document.createElement('a');
+      aEl.href = link;
+      aEl.target = "_blank";
+      aEl.appendChild(buttonEl)
+
+      return aEl;
+    }
+
+    const badgers = linkedButton('learn about badgers', 'https://badgerbadgerbadger.com');
+    document.getElementById('components').appendChild(badgers);
+
+
+    const worms = linkedButton('buy worms', 'https://www.worms.com/');
+    document.getElementById('components').appendChild(worms);
+
+
+    const leprechaun = linkedButton('luck of the irish?', 'http://leprechaun.com/');
+    document.getElementById('components').appendChild(leprechaun);
+  </script>
+
+</body>
+
+</html>

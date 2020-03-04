@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>summary details</title>
+</head>
+
+<body>
+
+  <div id='examples'>
+    <details closed>
+      <summary>greetings</summary>
+      <p>hi!</p>
+    </details>
+    <details open>
+      <summary>lorem</summary>
+      <p>ipsum. fake words</p>
+    </details>
+    <details closed>
+      <summary>foods</summary>
+      <p>tomato, potato, peanuts</p>
+    </details>
+  </div>
+
+  <hr>
+
+  <div id='components'></div>
+
+  <script id='DOM manipulation script'>
+    debugger;
+
+    const summaryDetailComponent = () => { }
+
+    const firstComponent = summaryDetailComponent('safety', 'first!', true);
+    document.getElementById('components').appendChild(firstComponent);
+
+    const secondComponent = summaryDetailComponent('colors', 'orange, purple, mauve', false);
+    document.getElementById('components').appendChild(secondComponent);
+
+    const thirdComponent = summaryDetailComponent('oi dybu pf!', '?', false);
+    document.getElementById('components').appendChild(thirdComponent);
+  </script>
+
+</body>
+
+</html>

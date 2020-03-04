@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>ordered list</title>
+</head>
+
+<body>
+
+  <div id='components'></div>
+
+  <script id='DOM manipulation script'>
+    debugger;
+
+    const listComponent = (arr, listType) => {
+      const olElement = document.createElement(listType);
+      arr.forEach(item => {
+        const liElement = document.createElement('li');
+        liElement.innerHTML = item;
+        olElement.appendChild(liElement);
+      });
+      return olElement;
+    }
+
+    const fishArray = ['one', 'two', 'red', 'blue'];
+    const fishListComponent = listComponent(fishArray, 'ol');
+    document.getElementById('components').appendChild(fishListComponent);
+
+    const birdsArray = ['dodo', 'pigeon', 'eagle', 'albatross', 'humming'];
+    const birdsListComponent = listComponent(birdsArray, 'ul');
+    document.getElementById('components').appendChild(birdsListComponent);
+
+    const insectsArray = ['ant', 'fly', 'beetle'];
+    const insectsListComponent = listComponent(insectsArray, 'ol');
+    document.getElementById('components').appendChild(insectsListComponent);
+  </script>
+
+</body>
+
+</html>

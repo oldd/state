@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>hyper link</title>
+</head>
+
+<body>
+
+  <div id='components'></div>
+
+  <script id='DOM manipulation script'>
+    debugger;
+
+    const hyperLink = (text, link, target) => {
+      const aElement = document.createElement('a');
+      aElement.innerHTML = text;
+      aElement.href = link;
+      aElement.target = target;
+      return aElement;
+    }
+
+    const badgers = hyperLink('learn about badgers', 'https://badgerbadgerbadger.com', '_self');
+    document.getElementById('components').appendChild(badgers);
+
+
+    const worms = hyperLink('buy worms', 'https://www.worms.com/', '_blank');
+    document.getElementById('components').appendChild(worms);
+
+
+    const leprechaun = hyperLink('luck of the irish?', 'http://leprechaun.com/', '_blank');
+    document.getElementById('components').appendChild(leprechaun);
+  </script>
+
+</body>
+
+</html>

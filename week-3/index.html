@@ -1,0 +1,451 @@
+<!-- pair programming -->
+<!-- logging & asserting dom elements
+      - kevin did this and it seems to work? -->
+<!-- example at the beginning of the slides
+    just a live example
+    no source & steps
+    source & steps is a resource for completing the project -->
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>State: Week 1</title>
+
+  <script src='../embed-scripts/code-along.js'></script>
+
+  <link rel="stylesheet" href="../reveal.js/css/reset.css">
+  <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="../reveal.js/css/theme/night.css">
+
+  <script src='../embed-scripts/beautify.js'></script>
+
+  <!-- why won't local parser-babylon work -->
+  <script src="../embed-scripts/prettier/standalone.js"></script>
+  <!-- <script src="https://unpkg.com/prettier@1.13.0/standalone.js"></script> -->
+  <!-- <script src="./prettier/parser-babylon.js"></script> -->
+  <script src="https://unpkg.com/prettier@1.13.0/parser-babylon.js"></script>
+  <!-- <script src="../embed-scripts/beautify.js"></script> -->
+
+
+
+  <script>
+    const hi = 'hi';
+  </script>
+
+  <style>
+    /* https://stackoverflow.com/questions/25479420/how-to-add-a-fixed-footer-on-all-slides */
+    .reveal .footer {
+      position: absolute;
+      bottom: 1em;
+      left: 1em;
+      font-size: 0.5em;
+      /* z-index: 1000; */
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="reveal">
+    <div class='footer'>
+      <ul id='footer-links' style='visibility: hidden;'>
+        <li>
+          <a id='to-repo' href="https://github.com/hackyourfuturebelgium/state" target="_blank">
+            <code>module repository</code>
+          </a>
+        </li>
+        <li>
+          </a><a id='to-sketchpad' href="https://hackyourfuture.be/sketchpad" target="_blank">
+            <code>live sketchpad</code>
+          </a>
+        </li>
+      </ul>
+      <br>
+      <code id="footer-text">ESC to overview</code>
+    </div>
+
+
+    <div class="slides">
+
+      <section id='cover-slide'>
+        <h2>State</h2>
+        <br>
+        <h3>Week 2</h3>
+        <br>
+        <code>"s"</code> for speaker notes
+        <br>
+        <br>
+        <a href="https://github.com/hackyourfuturebelgium/state/tree/master/week-3" target='_blank'>
+          -- back to repo --
+        </a>
+      </section>
+
+
+      <section id="learning-objectives">
+        <section>
+          <h1>Learning Objectives</h1>
+          <br>
+          <br>
+          <p>
+            What can you expect to cover in class today?
+          </p>
+        </section>
+        <section>
+          <h3>Pair Programming</h3>
+          <br>
+          <ul>
+            <li>2 people,</li>
+            <li>1 computer</li>
+          </ul>
+        </section>
+        <section>
+          <h3>DOM Components</h3>
+          <br>
+          <ul>
+            <li>Functions that Return DOM Elements</li>
+          </ul>
+        </section>
+      </section>
+
+
+      <section id='review'>
+        <h1>Review</h1>
+        <br>
+        <br>
+        <p>Any <code>sunday-review</code> issues?</p>
+        <p>Any other Questions?</p>
+        <br>
+        <code>(~30 min)</code>
+      </section>
+
+      <section id='what-you-will-build'>
+        <section>
+          <h1>What You'll Build</h1>
+          <br>
+          <p>A lot like last week, <br>
+            but with DOM Components</p>
+        </section>
+        <section>
+          <h3>Array Method Buttons</h3>
+          <iframe style='background-color:white; height: 75vh; width: 100%;'
+            src='../example-projects/list-component-stepped/7-story-reset.html'></iframe>
+        </section>
+        <section>
+          <h3>Filter List of Words</h3>
+          <iframe style='background-color:white; height: 75vh; width: 100%;'
+            src='../example-projects/list-component-separated/index.html'></iframe>
+        </section>
+      </section>
+
+
+      <section id='pair-programming'>
+        <section>
+          <h1>Pair Programming</h1>
+          <br>
+          <p>2 People, 1 Computer</p>
+        </section>
+      </section>
+
+      <section id='dom-manipulation'>
+        <section>
+          <h2>Using DOM Components</h2>
+          <br>
+          <p>functions that return DOM Elements</p>
+        </section>
+        <section id='using-dom-components-examples'>
+          <script>
+            codeAlong({
+              title: 'Using DOM Components: Examples',
+              container: 'using-dom-components-examples',
+              type: 'document',
+              source: [
+                {
+                  name: 'Hyper Link',
+                  path: '../dom-components/integrated-examples/hyper-link.html',
+                },
+                {
+                  name: 'Linked Button',
+                  path: '../dom-components/integrated-examples/linked-button.html',
+                },
+                {
+                  name: 'Ordered List',
+                  path: '../dom-components/integrated-examples/ordered-list.html',
+                },
+              ]
+            })
+          </script>
+        </section>
+        <section id='using-dom-components-exercises'>
+          <script>
+            codeAlong({
+              title: 'Using DOM Components: Exercises',
+              container: 'using-dom-components-exercises',
+              type: 'document',
+              source: [
+                {
+                  name: 'Summary & Details',
+                  path: '../dom-components/integrated-exercises/summary-details.html',
+                },
+                {
+                  name: 'Nested Elements',
+                  path: '../dom-components/integrated-exercises/nested-elements.html',
+                },
+                {
+                  name: 'Description List',
+                  path: '../dom-components/integrated-exercises/description-list.html',
+                },
+              ]
+            })
+          </script>
+        </section>
+      </section>
+
+      <section id='dom-manipulation'>
+        <section>
+          <h2>Testing DOM Components</h2>
+          <br>
+          <p>a lot like testing objects</p>
+        </section>
+        <section id='testing-dom-components-examples'>
+          <script>
+            codeAlong({
+              title: 'Testing DOM Components: Examples',
+              container: 'testing-dom-components-examples',
+              type: 'js',
+              source: [
+                {
+                  name: 'H (basic testing)',
+                  path: '../dom-components/isolated-examples/h-basic-testing.js',
+                },
+                {
+                  name: 'H (loop testing)',
+                  path: '../dom-components/isolated-examples/h-loop-testing.js',
+                },
+                {
+                  name: 'A (basic testing)',
+                  path: '../dom-components/isolated-examples/a-basic-testing.js',
+                },
+                {
+                  name: 'A (loop testing)',
+                  path: '../dom-components/isolated-examples/a-loop-testing.js',
+                },
+                {
+                  name: 'Linked Button',
+                  path: '../dom-components/isolated-examples/linked-button.js',
+                },
+              ]
+            })
+          </script>
+        </section>
+        <section id='testing-dom-components-exercises'>
+          <script>
+            codeAlong({
+              title: 'Testing DOM Components: Exercises',
+              container: 'testing-dom-components-exercises',
+              type: 'js',
+              source: [
+                {
+                  name: 'Fancy Editor',
+                  path: '../dom-components/isolated-exercises/fancy-editor.js',
+                },
+                {
+                  name: 'Summary & Details',
+                  path: '../dom-components/isolated-exercises/summary-details.js',
+                },
+                {
+                  name: 'Table (challenge)',
+                  path: '../dom-components/isolated-exercises/table.js',
+                },
+              ]
+            })
+          </script>
+        </section>
+      </section>
+
+      <section id='break'>
+        <h1>Break!</h1>
+        <br>
+        <code>(~20 min)</code>
+      </section>
+
+
+      <section id='example-projects'>
+        <section>
+          <h2>Example Projects</h2>
+          <br>
+          <p>finished code for inspiration</p>
+        </section>
+        <section id='array-method-buttons'>
+          <script>
+            codeAlong({
+              title: 'List Component: Array Method Buttons',
+              container: 'array-method-buttons',
+              type: 'document',
+              source: [
+                {
+                  name: '0. Setup',
+                  path: '../example-projects/list-component-stepped/0-setup.html'
+                },
+                {
+                  name: '1. Data & Log',
+                  path: '../example-projects/list-component-stepped/1-data-and-log.html'
+                },
+                {
+                  name: '2. Initialize',
+                  path: '../example-projects/list-component-stepped/2-initialize.html'
+                },
+                {
+                  name: '3. Push Word',
+                  path: '../example-projects/list-component-stepped/3-story-push-word.html'
+                },
+                {
+                  name: '4. Unshift Word',
+                  path: '../example-projects/list-component-stepped/4-story-unshift-word.html'
+                },
+                {
+                  name: '5. Pop Word',
+                  path: '../example-projects/list-component-stepped/5-story-pop-word.html'
+                },
+                {
+                  name: '6. Shift Word',
+                  path: '../example-projects/list-component-stepped/6-story-shift-word.html'
+                },
+                {
+                  name: '7. Reset',
+                  path: '../example-projects/list-component-stepped/7-story-reset.html'
+                },
+              ]
+            })
+          </script>
+        </section>
+        <section>
+          <h2>List Component: Filter Words</h2>
+          <br>
+          <ul>
+            <li><a href='../example-projects/list-component-separated/index.html' target='_blank'>live project</a></li>
+            <li><a
+                href='https://github.com/hackyourfuturebelgium/state/tree/master/example-projects/list-component-separated'
+                target='_blank'>source code</a></li>
+          </ul>
+        </section>
+      </section>
+
+      <section id='in-class-project'>
+        <section id='in-class-cover'>
+          <h2>In-Class Project</h2>
+          <br>
+          <p>Build a project in small groups</p>
+          <br>
+          <code>(~90 min)</code>
+        </section>
+        <section>
+          <h2>
+            <a href='https://github.com/HackYourFutureBelgium/configurable-button' target='_blank'>
+              Configurable Button Starter Repo
+            </a>
+          </h2>
+        </section>
+      </section>
+
+      <section id='homework-launch'>
+        <section>
+          <h2>Homework Launch</h2>
+          <br>
+          <p>It's only just beginning :)</p>
+        </section>
+        <section>
+          <h2><a href='https://github.com/hackyourfuturebelgium/state/tree/master/week-3' target='_blank'>
+              The Assignments</a></h2>
+        </section>
+        <section>
+          <h2><a href='https://github.com/HackYourFutureBelgium/homework-submission#homework-issues' target='_blank'>
+              Weekly Issues</a></h2>
+          <p>if you haven't already, please create an issue and:</p>
+          <br>
+          <ol>
+            <li>Name it something helpful</li>
+            <li><a
+                href='https://help.github.com/en/github/managing-your-work-on-github/assigning-issues-and-pull-requests-to-other-github-users'
+                target='_blank'>
+                Assign</a>, it to yourself</li>
+            <li><a
+                href='https://help.github.com/en/github/managing-your-work-on-github/applying-labels-to-issues-and-pull-requests'
+                target='_blank'>
+                Label</a>, it <code>week-3</code> and <code>homework</code></li>
+            <li><a href='https://help.github.com/en/github/managing-your-work-on-github/about-milestones'
+                target='_blank'>
+                Milestone</a> it <code>incremental-development</code></li>
+            <li>Fill in the assignments</li>
+            <li>Move it to the project board</li>
+          </ol>
+        </section>
+      </section>
+
+      <section id='cover-slide'>
+        <h3>State</h3>
+        <br>
+        <h2>Week 1</h2>
+        <br>
+        <p>
+          "<code>s</code>" for speaker notes
+          <!-- <br>
+          "<code>b</code>" for chalkboard -->
+        </p>
+        <a href="https://github.com/hackyourfuturebelgium/state/tree/master/week-3" target='_blank'>
+          -- back to repo --
+        </a>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="../reveal.js/js/reveal.js"></script>
+
+  <script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+      controlsTutorial: true,
+      slideNumber: 'h/t',
+      hash: true,
+      help: true,
+      width: "100%",
+      height: "100%",
+      keyboard: {
+        // 67: function () { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
+        // 66: function () { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+        // 46: function () { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+        // 8: function () { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
+        // 68: function () { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
+        // 88: function () { RevealChalkboard.colorNext() },	// cycle colors forward when 'x' is pressed
+        // 89: function () { RevealChalkboard.colorPrev() },	// cycle colors backward when 'y' is pressed
+      },
+      dependencies: [
+        // { src: 'plugin/markdown/marked.js' },
+        // { src: 'plugin/markdown/markdown.js' },
+        { src: '../reveal.js/plugin/notes/notes.js', async: true },
+        // { src: '../reveal.js/plugin/chalkboard/chalkboard.js' },
+        // { src: 'plugin/highlight/highlight.js', async: true }
+      ],
+    });
+
+    Reveal.addEventListener('overviewshown', function (event) {
+      document.getElementById('footer-text').innerHTML = "ESC into slide";
+      document.getElementById('footer-links').style.visibility = 'visible';
+    });
+    Reveal.addEventListener('overviewhidden', function (event) {
+      document.getElementById('footer-text').innerHTML = "ESC to overview";
+      document.getElementById('footer-links').style.visibility = 'hidden';
+    });
+
+
+
+  </script>
+</body>
+
+</html>

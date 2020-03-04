@@ -6,6 +6,20 @@
       "endpoints": [
         "development-strategy.md"
       ]
+    },
+    {
+      "name": "numbery-and-nany",
+      "live": true,
+      "endpoints": [
+        "development-strategy.md"
+      ]
+    },
+    {
+      "name": "even-or-odd",
+      "live": true,
+      "endpoints": [
+        "development-strategy.md"
+      ]
     }
   ],
   "exercises": [
@@ -49,6 +63,10 @@
       "endpoints": [
         "exercises"
       ]
+    },
+    {
+      "name": "dom-components",
+      "live": true,
     },
     {
       "name": "listeners-and-handlers",
