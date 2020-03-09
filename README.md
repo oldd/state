@@ -23,7 +23,10 @@
   * [Prep Work](./week-2#prep-work)
   * [Lesson Plan](https://hackyourfuture.be/state/week-2)
   * [Assignments](./week-2#assignments)
-* Week 3
+* [Week 3](./week-3)
+  * [Prep Work](./week-3#prep-work)
+  * [Lesson Plan](https://hackyourfuture.be/state/week-3)
+  * [Assignments](./week-3#assignments)
 * [Deeper Dives](./deeper-dives.md)
 * [Class Recordings](./class-recordings.md)
 * [Study Links](https://study.hackyourfuture.be) (external)
