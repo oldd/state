@@ -61,7 +61,7 @@ Starting with the exercises will make it easier to complete the project.  Spendi
 
 ### Project: `even-or-odd`
 
-> [Open Ended](http://hackyourfuture.be/homework-submission/#open-ended)
+> [Starter Code](http://hackyourfuture.be/homework-submission/#projects)
 
 This week's project is to create a small application that allows a user to interact with data saved in your website. Your goal should be to learn how to incrementally develop, log and debug your project.  Don't worry so much about making pretty or making quick progress, a finished app is not the goal! To get started [fork the `even-or-odd` repository](https://github.com/HackYourFutureBelgium/even-or-odd), clone it and open the code in VSC.  Here are some tips:
 
