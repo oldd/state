@@ -54,7 +54,7 @@ Starting with the exercises will make it easier to complete the project.  Spendi
 
 * (_Isolate_) Continue [Basic Algorithm Scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/)
 * (_Isolate_) Fork [javascript-exercises](https://github.com/TheOdinProject/javascript-exercises)
-* (_Isolate_) Keep learning about TDD: [what is TDD?](https://duckduckgo.com/?q=what+is+tdd%3F&iax=videos&ia=videos), [online TDD exercises (no NPM troubles :)](http://janke-learning.org/tdd/)
+* (_Isolate_) Keep learning about TDD: [what is TDD?](https://duckduckgo.com/?q=what+is+tdd%3F&iax=videos&ia=videos)
 * (_Integrate_) Fork [javascript-you__dom-exercises](https://github.com/omahacodeschool/javascript-toy__dom-exercises)
 * (_Integrate_) Fork [practice-and-learn-the-dom](https://github.com/tutsplus/practice-javascript-and-learn-the-dom)
 * (_Integrate_) Fork [using-user-input](https://github.com/hackyourfuturebelgium/using-user-input)
